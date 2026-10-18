@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Prova 2 — Histologia e Anatomia | Agressão e Defesa</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>PROVA 2</h1>
+    <p>Histologia, Anatomia e Imunologia — Módulo Agressão e Defesa</p>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">&larr; Voltar para a lista de provas</a></div>
+
+<main>
+  <div id="quiz-app"></div>
+</main>
+
+<footer class="site-footer">
+  Material de estudo pessoal — uso educacional não comercial.
+</footer>
+
+<script src="assets/js/engine.js"></script>
+<script>
+const examData = {
+  title: "PROVA 2 — Histologia e Anatomia: Agressão e Defesa",
+  subject: "Baço · Timo (esquema) · Centro germinativo do linfonodo · Leucócitos · Anatomia clínica dos linfonodos · Hipersensibilidade (tipos I-IV) · Sistema ABO/Rh",
+  questions: [
+    {
+      type: "single",
+      points: 10,
+      prompt: "Observe o esquema do baço. A região ao redor da arteríola central, organizada por linfócitos T e B, corresponde à polpa branca. Assinale a alternativa CORRETA sobre a histofisiologia esplênica:",
+      image: "assets/img/prova2/baco-esquema.svg",
+      imageAlt: "Esquema do baço mostrando polpa branca, polpa vermelha, zona marginal e hilo esplênico",
+      options: [
+        "A polpa branca é formada pela bainha linfática periarteriolar (PALS, rica em linfócitos T) e por folículos linfoides com centro germinativo (ricos em linfócitos B); a polpa vermelha é responsável pela filtração e remoção de hemácias senescentes.",
+        "A polpa vermelha é a principal responsável pela resposta imune adaptativa contra antígenos circulantes no sangue, enquanto a polpa branca apenas armazena hemácias.",
+        "A zona marginal, situada entre a polpa branca e a vermelha, não possui função imunológica relevante.",
+        "A artéria central, situada na polpa vermelha, não emite ramos para a polpa branca.",
+        "Os centros germinativos da polpa branca são responsáveis pela hematopoese no baço adulto."
+      ],
+      correctIndex: 0,
+      explanation: "A polpa branca (PALS + folículos linfoides) é a região linfoide do baço, responsável pela resposta imune adaptativa contra antígenos transportados pelo sangue. A polpa vermelha (cordões esplênicos e seios venosos) filtra o sangue, removendo hemácias senescentes e partículas. A zona marginal, entre as duas polpas, é rica em macrófagos e linfócitos B especializados, sendo a primeira linha de contato com antígenos sanguíneos. A artéria central percorre a polpa branca (daí o nome) antes de se ramificar na polpa vermelha. No baço adulto normal não há hematopoese relevante (esta ocorre na medula óssea)."
+    },
+    {
+      type: "truefalse-group",
+      points: 10,
+      prompt: "Com base no esquema do lóbulo tímico (córtex, medula, corpúsculo de Hassall e barreira hematotímica), classifique as afirmações como Verdadeiras ou Falsas:",
+      image: "assets/img/prova2/timo-esquema.svg",
+      imageAlt: "Esquema de um lóbulo do timo mostrando córtex, medula, corpúsculo de Hassall e barreira hematotímica",
+      items: [
+        { text: "O córtex tímico é mais denso em células (timócitos) do que a medula.", correct: true },
+        { text: "A barreira hematotímica, formada por células epiteliais reticulares tipo I, capilares e macrófagos, protege os timócitos corticais imaturos do contato com antígenos circulantes no sangue.", correct: true },
+        { text: "Os corpúsculos de Hassall são formados por células epiteliais reticulares tipo VI e estão localizados no córtex tímico.", correct: false },
+        { text: "A medula tímica, apesar de menos densa em células, contém linfócitos T já maduros, prontos para deixar o órgão pelos vasos sanguíneos.", correct: true },
+        { text: "Como a medula tímica não possui uma barreira tão seletiva quanto o córtex, células dendríticas e macrófagos ali presentes podem apresentar autoantígenos aos linfócitos T, contribuindo para a seleção negativa.", correct: true }
+      ],
+      explanation: "O córtex tímico é densamente povoado por timócitos imaturos, enquanto a medula é menos densa. A barreira hematotímica (células epiteliais tipo I + endotélio capilar + macrófagos) isola o córtex do sangue circulante, evitando contato precoce de timócitos imaturos com antígenos. Os corpúsculos de Hassall (células epiteliais tipo VI) ficam na MEDULA, não no córtex. A medula contém timócitos já selecionados (maduros), prestes a migrar para a circulação, e, por ser menos 'protegida', permite que células apresentadoras de antígeno exponham autoantígenos aos linfócitos T, processo importante para a seleção negativa (eliminação de clones autorreativos)."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "A imagem mostra um linfonodo com folículos linfoides, alguns com centro germinativo evidente. Sobre a histofisiologia dos folículos e centros germinativos, assinale a alternativa CORRETA:",
+      image: "assets/img/prova1/linfonodo-corticomedular.jpg",
+      imageAlt: "Linfonodo evidenciando folículos linfoides com e sem centro germinativo",
+      options: [
+        "Centros germinativos surgem após a ativação de linfócitos B por antígenos, com proliferação, hipermutação somática e seleção de clones de maior afinidade, auxiliados por linfócitos T helper foliculares e células dendríticas foliculares.",
+        "Os folículos linfoides primários (sem centro germinativo) já contêm plasmócitos secretores de anticorpos de alta afinidade.",
+        "O centro germinativo é composto exclusivamente por linfócitos T citotóxicos em proliferação.",
+        "A formação do centro germinativo independe da presença de linfócitos T helper.",
+        "Células dendríticas foliculares são as mesmas células que migram da pele para o linfonodo (células de Langerhans)."
+      ],
+      correctIndex: 0,
+      explanation: "O centro germinativo é o local da reação de centro germinativo: linfócitos B ativados proliferam intensamente, sofrem hipermutação somática (alterando a afinidade de seus receptores) e são selecionados conforme a afinidade pelo antígeno, com auxílio de linfócitos T helper foliculares (Tfh) e das células dendríticas foliculares (que retêm antígeno em sua superfície, mas NÃO são as mesmas células de Langerhans, que são células apresentadoras de antígeno da epiderme). Folículos primários (sem centro germinativo) contêm linfócitos B ainda não ativados, sem plasmócitos de alta afinidade. A formação do centro germinativo DEPENDE de linfócitos T helper."
+    },
+    {
+      type: "multiple",
+      points: 15,
+      prompt: "A imagem mostra um esfregaço de sangue periférico com diferentes leucócitos indicados nas setas. Considerando a morfologia típica de cada tipo celular, selecione a(s) alternativa(s) CORRETA(S) sobre os leucócitos do sangue periférico:",
+      image: "assets/img/prova1/sangue-leucocitos.jpg",
+      imageAlt: "Esfregaço de sangue periférico com diferentes leucócitos indicados",
+      imageCaption: "Esfregaço de sangue periférico — painéis A, B e C (400x).",
+      options: [
+        "Neutrófilos apresentam núcleo multilobulado (segmentado) e grânulos específicos pouco visíveis à coloração padrão; são os leucócitos mais numerosos no sangue e atuam na fagocitose de bactérias.",
+        "Eosinófilos apresentam núcleo tipicamente bilobulado e grânulos citoplasmáticos grandes, que se coram fortemente por corantes ácidos (eosina), participando de respostas contra parasitas e processos alérgicos.",
+        "Basófilos são os leucócitos mais numerosos no esfregaço e não possuem grânulos citoplasmáticos visíveis à microscopia óptica.",
+        "Monócitos são os menores leucócitos do sangue periférico e não se diferenciam em outras células depois de deixar a circulação.",
+        "Linfócitos apresentam grânulos citoplasmáticos abundantes e são responsáveis exclusivamente pela fagocitose de microrganismos."
+      ],
+      correctIndexes: [0, 1],
+      explanation: "Neutrófilos (núcleo segmentado, grânulos discretos) são os leucócitos mais abundantes e principais fagócitos contra bactérias. Eosinófilos (núcleo bilobulado, grânulos grandes corados por eosina) atuam contra parasitas e em reações alérgicas. Basófilos, ao contrário do afirmado, são os leucócitos MENOS numerosos e possuem grânulos basofílicos bem visíveis. Monócitos são as MAIORES células do sangue periférico (não as menores) e se diferenciam em macrófagos e células dendríticas nos tecidos. Linfócitos têm citoplasma escasso, sem grânulos abundantes, e atuam principalmente na resposta imune adaptativa (não na fagocitose)."
+    },
+    {
+      type: "single",
+      points: 8,
+      prompt: "Paciente com adenocarcinoma gástrico na região da grande curvatura é avaliado quanto ao estadiamento cirúrgico. Os cirurgiões avaliam prioritariamente a cadeia de linfonodos indicada na seta da imagem (ao longo da grande curvatura gástrica), por ser via inicial comum de disseminação linfática desse tumor. Assinale o nome correto dessa cadeia:",
+      image: "assets/img/prova1/anat-gastromentais.jpg",
+      imageAlt: "Modelo anatômico do estômago com seta indicando cadeia de linfonodos",
+      options: [
+        "Linfonodos gastromentais (gastroepiploicos)",
+        "Linfonodos para-aórticos",
+        "Linfonodos axilares",
+        "Linfonodos poplíteos",
+        "Linfonodos cervicais"
+      ],
+      correctIndex: 0,
+      explanation: "Os linfonodos gastromentais (gastroepiploicos) acompanham os vasos gastroepiploicos ao longo da grande curvatura gástrica e costumam ser uma das primeiras cadeias avaliadas no estadiamento linfonodal do câncer gástrico nessa topografia."
+    },
+    {
+      type: "single",
+      points: 8,
+      prompt: "Paciente com carcinoma de pulmão é avaliado quanto ao estadiamento TNM. O comprometimento dos linfonodos indicados na seta — próximos à bifurcação dos brônquios principais — é um marcador importante de disseminação regional da doença. Assinale o nome correto dessa cadeia:",
+      image: "assets/img/prova1/anat-traqueobronquiais.jpg",
+      imageAlt: "Modelo anatômico de pescoço e tórax com seta indicando cadeia de linfonodos",
+      options: [
+        "Linfonodos traqueobronquiais",
+        "Linfonodos inguinais profundos",
+        "Linfonodos mesentéricos",
+        "Linfonodos lombares",
+        "Linfonodos poplíteos"
+      ],
+      correctIndex: 0,
+      explanation: "Os linfonodos traqueobronquiais situam-se na região da bifurcação da traqueia e dos brônquios principais, sendo uma estação linfonodal relevante no estadiamento regional de neoplasias pulmonares."
+    },
+    {
+      type: "single",
+      points: 9,
+      prompt: "Paciente apresenta lesão de pele suspeita (melanoma) no membro inferior. Na avaliação clínica, o examinador palpa a cadeia de linfonodos indicada na seta, na região da virilha, por ser via inicial comum de drenagem linfática de lesões cutâneas do membro inferior. Assinale o nome correto dessa cadeia:",
+      image: "assets/img/prova1/anat-inguinais.jpg",
+      imageAlt: "Modelo anatômico de membro inferior com seta indicando cadeia de linfonodos",
+      options: [
+        "Linfonodos inguinais superficiais",
+        "Linfonodos axilares",
+        "Linfonodos cervicais superficiais",
+        "Linfonodos traqueobronquiais",
+        "Linfonodos pancreaticoduodenais"
+      ],
+      correctIndex: 0,
+      explanation: "Os linfonodos inguinais superficiais drenam a pele do membro inferior, períneo e parede abdominal inferior, sendo a primeira estação linfonodal avaliada em lesões cutâneas suspeitas do membro inferior, como no melanoma."
+    },
+    {
+      type: "single",
+      points: 7,
+      prompt: "Um paciente de 24 anos, poucos minutos após ser picado por uma abelha, desenvolveu urticária generalizada, edema de face e dificuldade respiratória (broncoespasmo), evoluindo para anafilaxia. Qual o mecanismo imunológico envolvido?",
+      options: [
+        "Hipersensibilidade tipo I: anticorpos IgE ligados a mastócitos e basófilos reconhecem o alérgeno, promovendo degranulação imediata com liberação de histamina e outros mediadores.",
+        "Hipersensibilidade tipo II: anticorpos IgG se ligam a antígenos de superfície celular, ativando o complemento.",
+        "Hipersensibilidade tipo III: formação de imunocomplexos circulantes que se depositam em tecidos.",
+        "Hipersensibilidade tipo IV: resposta mediada por linfócitos T, que se manifesta em 24-72 horas.",
+        "Resposta imune inata mediada exclusivamente por neutrófilos."
+      ],
+      correctIndex: 0,
+      explanation: "A reação imediata (minutos) após exposição a um alérgeno, com urticária, edema e broncoespasmo evoluindo para anafilaxia, é o quadro clássico de hipersensibilidade tipo I: IgE pré-formada, ligada a receptores de alta afinidade em mastócitos e basófilos, reconhece o alérgeno e desencadeia degranulação imediata (histamina, triptase, leucotrienos), causando vasodilatação, aumento de permeabilidade vascular e broncoespasmo."
+    },
+    {
+      type: "single",
+      points: 7,
+      prompt: "Um paciente com lúpus eritematoso sistêmico apresenta depósitos de imunocomplexos (antígeno-anticorpo) em glomérulos renais, ativando o sistema complemento e causando um processo inflamatório local (glomerulonefrite). Esse mecanismo é classificado como:",
+      options: [
+        "Hipersensibilidade tipo I",
+        "Hipersensibilidade tipo II",
+        "Hipersensibilidade tipo III",
+        "Hipersensibilidade tipo IV",
+        "Tolerância imunológica"
+      ],
+      correctIndex: 2,
+      explanation: "A hipersensibilidade tipo III é mediada por imunocomplexos (antígeno-anticorpo) circulantes que se depositam em tecidos (como glomérulos renais, vasos e articulações), ativando o complemento e recrutando neutrófilos, o que gera inflamação local e lesão tecidual — mecanismo clássico do lúpus eritematoso sistêmico e da glomerulonefrite lúpica."
+    },
+    {
+      type: "single",
+      points: 6,
+      prompt: "Um paciente realiza o teste tuberculínico (PPD) e, 48 a 72 horas após a aplicação intradérmica, apresenta endurecimento e eritema no local. Esse tipo de reação é mediada principalmente por:",
+      options: [
+        "IgE e mastócitos",
+        "IgG e complemento",
+        "Imunocomplexos circulantes",
+        "Linfócitos T de memória, em resposta tardia mediada por células",
+        "Neutrófilos e IgA"
+      ],
+      correctIndex: 3,
+      explanation: "A reação ao PPD é o exemplo clássico de hipersensibilidade tipo IV (tardia): linfócitos T de memória (principalmente Th1), previamente sensibilizados, reconhecem o antígeno e recrutam macrófagos ao local, formando um infiltrado que leva horas a dias para se desenvolver — daí o nome 'tardia', em contraste com as reações mediadas por anticorpos (tipos I, II e III), que são mais rápidas."
+    },
+    {
+      type: "single",
+      points: 5,
+      prompt: "Sobre o sistema ABO e Rh de tipagem sanguínea, assinale a alternativa CORRETA:",
+      options: [
+        "Indivíduos do tipo O Rh negativo são considerados doadores universais de hemácias, pois não possuem antígenos A, B nem D (Rh) nas hemácias.",
+        "Indivíduos do tipo AB Rh positivo são doadores universais, pois possuem todos os antígenos.",
+        "Um indivíduo Rh negativo pode receber hemácias Rh positivas sem risco, desde que seja a primeira transfusão e os grupos ABO sejam compatíveis.",
+        "Anticorpos anti-A e anti-B são sempre do tipo IgG, produzidos somente após exposição prévia ao antígeno correspondente.",
+        "O sistema Rh é determinado por antígenos presentes no plasma sanguíneo, não nas hemácias."
+      ],
+      correctIndex: 0,
+      explanation: "O tipo O Rh negativo não expressa antígenos A, B nem D na membrana das hemácias, por isso é o doador universal de hemácias. O tipo AB Rh positivo é o RECEPTOR universal (não doador), pois seu plasma não tem anticorpos anti-A, anti-B nem anti-D. Mesmo na primeira exposição, hemácias Rh+ em receptor Rh- podem sensibilizar o sistema imune, gerando risco em exposições futuras. Os anticorpos anti-A e anti-B são, em sua maioria, NATURAIS e do tipo IgM (não exigem exposição prévia conhecida). Os antígenos do sistema Rh ficam na membrana das hemácias, não no plasma."
+    },
+    {
+      type: "single",
+      points: 5,
+      prompt: "Durante uma transfusão sanguínea de emergência, um paciente tipo A Rh positivo recebe, por engano, uma bolsa de sangue tipo B. Qual é a principal consequência imunológica imediata esperada?",
+      options: [
+        "Nenhuma reação, pois o fator Rh positivo do receptor protege contra incompatibilidade ABO.",
+        "Reação hemolítica aguda, pois os anticorpos naturais anti-B (IgM) do plasma do receptor aglutinam e lisam as hemácias transfundidas, ativando o complemento.",
+        "Reação alérgica tipo I, com liberação maciça de histamina pelos mastócitos do doador.",
+        "Formação lenta de imunocomplexos, com sintomas que só aparecem após 7 a 10 dias.",
+        "Rejeição mediada exclusivamente por linfócitos T citotóxicos, como em um transplante de órgão sólido."
+      ],
+      correctIndex: 1,
+      explanation: "O receptor tipo A possui, naturalmente, anticorpos anti-B (IgM) em seu plasma. Ao receber hemácias tipo B, esses anticorpos se ligam ao antígeno B presente nas hemácias transfundidas, promovendo aglutinação e ativação do complemento pela via clássica, levando à hemólise intravascular imediata — um quadro potencialmente grave, com febre, calafrios e hemoglobinúria. O fator Rh não protege contra incompatibilidade ABO; são sistemas antigênicos independentes."
+    }
+  ]
+};
+renderExam(examData);
+</script>
+</body>
+</html>

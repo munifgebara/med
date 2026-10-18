@@ -1,0 +1,69 @@
+<svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <rect x="0" y="0" width="800" height="560" fill="#ffffff"/>
+
+  <!-- Spleen capsule outline -->
+  <ellipse cx="330" cy="280" rx="260" ry="190" fill="#b23a48" stroke="#5c1a22" stroke-width="4"/>
+  <ellipse cx="330" cy="280" rx="248" ry="178" fill="#c4505d"/>
+
+  <!-- Red pulp texture (sinusoids) -->
+  <g stroke="#8f2630" stroke-width="2" fill="none" opacity="0.55">
+    <path d="M120 180 q40 20 10 45 q-30 25 15 45"/>
+    <path d="M160 320 q35 15 5 40 q-30 25 20 40"/>
+    <path d="M420 150 q40 25 5 50 q-35 25 15 45"/>
+    <path d="M480 300 q40 20 5 45 q-30 25 20 45"/>
+    <path d="M250 420 q40 15 10 35 q-30 20 15 35"/>
+    <path d="M470 420 q35 15 5 35 q-25 20 15 35"/>
+  </g>
+
+  <!-- White pulp nodules (PALS + germinal centers) -->
+  <g>
+    <circle cx="230" cy="210" r="42" fill="#f3e6d8" stroke="#6b4a2b" stroke-width="3"/>
+    <circle cx="230" cy="210" r="16" fill="#e7c9a0" stroke="#6b4a2b" stroke-width="2"/>
+    <circle cx="230" cy="210" r="4" fill="#7a2e2e"/>
+
+    <circle cx="370" cy="200" r="36" fill="#f3e6d8" stroke="#6b4a2b" stroke-width="3"/>
+    <circle cx="370" cy="200" r="13" fill="#e7c9a0" stroke="#6b4a2b" stroke-width="2"/>
+    <circle cx="370" cy="200" r="3.5" fill="#7a2e2e"/>
+
+    <circle cx="300" cy="340" r="48" fill="#f3e6d8" stroke="#6b4a2b" stroke-width="3"/>
+    <circle cx="300" cy="340" r="18" fill="#e7c9a0" stroke="#6b4a2b" stroke-width="2"/>
+    <circle cx="300" cy="340" r="4.5" fill="#7a2e2e"/>
+
+    <circle cx="440" cy="350" r="34" fill="#f3e6d8" stroke="#6b4a2b" stroke-width="3"/>
+    <circle cx="440" cy="350" r="12" fill="#e7c9a0" stroke="#6b4a2b" stroke-width="2"/>
+    <circle cx="440" cy="350" r="3" fill="#7a2e2e"/>
+  </g>
+
+  <!-- marginal zone ring example on the big nodule -->
+  <circle cx="300" cy="340" r="48" fill="none" stroke="#2c6e49" stroke-width="3" stroke-dasharray="4 3"/>
+
+  <!-- Hilum vessels -->
+  <path d="M30 280 q60 -10 90 10" fill="none" stroke="#1d4e89" stroke-width="10" stroke-linecap="round"/>
+  <path d="M30 300 q60 10 90 -4" fill="none" stroke="#b5171e" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Labels with leader lines -->
+  <g font-size="18" fill="#1a1a1a">
+    <line x1="230" y1="210" x2="110" y2="110" stroke="#333" stroke-width="1.5"/>
+    <text x="30" y="100">Bainha linfática periarteriolar</text>
+    <text x="30" y="122">(PALS) — polpa branca</text>
+
+    <line x1="300" y1="340" x2="150" y2="470" stroke="#333" stroke-width="1.5"/>
+    <text x="20" y="495">Centro germinativo</text>
+
+    <line x1="300" y1="340" x2="150" y2="440" stroke="#333" stroke-width="0" opacity="0"/>
+    <line x1="348" y1="340" x2="470" y2="470" stroke="#333" stroke-width="1.5"/>
+    <text x="440" y="495">Zona marginal</text>
+
+    <line x1="420" y1="230" x2="620" y2="150" stroke="#333" stroke-width="1.5"/>
+    <text x="560" y="130">Polpa vermelha</text>
+    <text x="560" y="152">(cordões e seios esplênicos)</text>
+
+    <line x1="70" y1="285" x2="60" y2="340" stroke="#333" stroke-width="1.5"/>
+    <text x="10" y="365">Hilo esplênico</text>
+    <text x="10" y="387">(artéria / veia)</text>
+
+    <line x1="300" y1="340" x2="300" y2="340" stroke="none"/>
+  </g>
+
+  <text x="400" y="40" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Baço — corte esquemático</text>
+</svg>

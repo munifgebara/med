@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Prova 1 — Histologia e Anatomia | Agressão e Defesa</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>PROVA 1</h1>
+    <p>Histologia, Anatomia e Imunologia — Módulo Agressão e Defesa</p>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">&larr; Voltar para a lista de provas</a></div>
+
+<main>
+  <div id="quiz-app"></div>
+</main>
+
+<footer class="site-footer">
+  Material de estudo pessoal — uso educacional não comercial.
+</footer>
+
+<script src="assets/js/engine.js"></script>
+<script>
+const examData = {
+  title: "PROVA 1 — Histologia e Anatomia: Agressão e Defesa",
+  subject: "Timo e seleção de linfócitos T · Linfonodo (HEV e seios) · Esfregaço sanguíneo · Anatomia dos linfonodos · Imunologia (sistema Rh)",
+  questions: [
+    {
+      type: "truefalse-group",
+      points: 10,
+      prompt: "O gene AIRE (autoimmune regulator) é expresso pelas células epiteliais medulares do timo e controla a expressão de autoantígenos próprios, permitindo a seleção negativa de linfócitos T autorreativos. Estudos mostram que pessoas com síndrome de Down apresentam menor expressão de AIRE, tornando-as mais suscetíveis a doenças autoimunes. Observe a imagem do timo (A: visão geral; B: córtex; C: junção corticomedular; D: medula) e classifique cada afirmação como Verdadeira ou Falsa:",
+      image: "assets/img/prova1/timo-aire.jpg",
+      imageAlt: "Corte histológico do timo mostrando córtex, junção corticomedular e medula",
+      imageCaption: "Timo — A) visão geral (córtex e medula); B) córtex (1000x); C) junção corticomedular (1000x); D) medula (1000x).",
+      items: [
+        { text: "O gene AIRE é expresso principalmente por células epiteliais da medula tímica, e não do córtex.", correct: true },
+        { text: "Linfócitos T duplo-positivos (CD4+CD8+) que não reconhecem com afinidade adequada o complexo MHC-próprio no córtex tímico morrem por apoptose — processo chamado de seleção positiva.", correct: true },
+        { text: "A falha do AIRE prejudica a seleção POSITIVA, impedindo que linfócitos T úteis amadureçam no córtex tímico.", correct: false },
+        { text: "Linfócitos T autorreativos que reconhecem antígenos próprios com alta afinidade na medula tímica normalmente sofrem apoptose (seleção negativa); na falha do AIRE, esses linfócitos sobrevivem e podem deixar o timo.", correct: true },
+        { text: "Os corpúsculos de Hassall, formados por células epiteliais reticulares tipo VI, localizam-se no córtex tímico.", correct: false }
+      ],
+      explanation: "O AIRE atua nas células epiteliais medulares, promovendo a expressão de autoantígenos de tecidos periféricos para que linfócitos T autorreativos sejam eliminados por apoptose — a seleção NEGATIVA, que ocorre na MEDULA (não no córtex, e não é a seleção positiva). A seleção positiva ocorre no córtex: timócitos duplo-positivos que não reconhecem o MHC próprio morrem por 'negligência'. Quando o AIRE falha, a seleção negativa é que fica comprometida, permitindo a sobrevivência de clones autorreativos. Os corpúsculos de Hassall (células epiteliais tipo VI) ficam na MEDULA, não no córtex."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "Observe a imagem do linfonodo (painel B) e analise as duas afirmações sobre a estrutura vascular indicada no paracórtex:\nI. A estrutura corresponde a um vaso sanguíneo especializado, no paracórtex, com células endoteliais de morfologia cúbica (diferente do endotélio pavimentoso comum).\nII. Essa estrutura expressa moléculas de adesão (selectinas, integrinas) e quimiocinas que permitem o rolamento, a adesão e a diapedese de linfócitos virgens (naïve) do sangue para o parênquima do linfonodo.\nAssinale a alternativa correta:",
+      image: "assets/img/prova1/linfonodo-paracortex.jpg",
+      imageAlt: "Linfonodo evidenciando paracórtex e folículos linfoides",
+      imageCaption: "Linfonodo — visão geral (A, 40x) e detalhes do paracórtex (B) e folículos (C), 400x.",
+      options: [
+        "As afirmações I e II são verdadeiras, e a II justifica corretamente a I.",
+        "As afirmações I e II são verdadeiras, mas a II não justifica a I.",
+        "A afirmação I é verdadeira, e a II é falsa.",
+        "A afirmação I é falsa, e a II é verdadeira.",
+        "As afirmações I e II são falsas."
+      ],
+      correctIndex: 1,
+      explanation: "A estrutura é a vênula de endotélio alto (HEV — high endothelial venule): localiza-se no paracórtex (zona T), tem lúmen evidente e endotélio cúbico, diferente do endotélio pavimentoso comum. A afirmação I está correta. A HEV realmente expressa moléculas de adesão e quimiocinas (ex.: CCL21) que promovem rolamento, adesão e diapedese de linfócitos naïve — linfócitos T migram para o paracórtex e linfócitos B para os folículos. A afirmação II também está correta. Porém, a I descreve a MORFOLOGIA do vaso (endotélio cúbico) e a II descreve sua FUNÇÃO (recrutamento de linfócitos); a função não explica por que o endotélio é cúbico. Por isso existe relação funcional entre as duas afirmações, mas a II não é uma justificativa direta da I."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "Sobre a circulação da linfa e a função imunológica dos linfonodos, analise as afirmativas:\nI. O caminho da linfa segue a sequência: vasos linfáticos aferentes → seio subcapsular → seios paratrabeculares → seios medulares → vasos linfáticos eferentes.\nII. O sistema de seios é formado por canais irregulares, delimitados por células endoteliais e por uma rede de células e fibras reticulares que retêm partículas, antígenos e microrganismos.\nIII. A arquitetura dos seios reduz a velocidade do fluxo linfático, favorecendo a filtragem da linfa.\nIV. Macrófagos localizados próximos aos seios fagocitam partículas e patógenos, promovendo a filtragem física e biológica da linfa.\nV. Antígenos proteicos trazidos pela linfa podem alcançar os folículos linfoides e iniciar a ativação de linfócitos B foliculares.\nAssinale a alternativa correta:",
+      image: "assets/img/prova1/linfonodo-corticomedular.jpg",
+      imageAlt: "Linfonodo evidenciando a organização cortico-medular e folículos",
+      imageCaption: "Linfonodo — organização cortical e folículos linfoides (100x e 400x).",
+      options: [
+        "Apenas as afirmativas I, II e III estão corretas.",
+        "Apenas as afirmativas III e IV estão corretas.",
+        "Apenas as afirmativas IV e V estão corretas.",
+        "Apenas as afirmativas I, II e V estão corretas.",
+        "Todas as afirmativas estão corretas."
+      ],
+      correctIndex: 4,
+      explanation: "Todas as afirmativas descrevem corretamente a histofisiologia do sistema de seios do linfonodo: o trajeto da linfa (I), a estrutura reticular que retém partículas (II), a redução de velocidade que favorece a filtragem (III), a ação fagocitária dos macrófagos (IV) e a chegada de antígenos aos folículos para ativação de linfócitos B (V) são todos processos bem estabelecidos na fisiologia linfonodal."
+    },
+    {
+      type: "multiple",
+      points: 15,
+      prompt: "Uma criança foi submetida à timectomia (retirada do timo) precoce durante a correção cirúrgica de uma cardiopatia congênita. Meses depois, exames histológicos de órgãos linfoides secundários revelaram desenvolvimento deficiente da principal região timo-dependente desses órgãos. Selecione a(s) alternativa(s) CORRETA(S):",
+      options: [
+        "A região afetada corresponde ao paracórtex do linfonodo (zona T), pois a ausência do timo reduz a produção e diferenciação de linfócitos T, diminuindo essa área.",
+        "A região afetada corresponde aos folículos linfoides do linfonodo (zona B), pois a timectomia compromete diretamente a produção de linfócitos B.",
+        "Na polpa branca do baço, a bainha linfática periarteriolar (PALS, região T-dependente) também apresenta desenvolvimento deficiente, pelo mesmo motivo.",
+        "A região afetada corresponde aos seios subcapsulares do linfonodo, pois a timectomia compromete a circulação da linfa.",
+        "A medula do linfonodo, rica em plasmócitos, também fica deficiente, pois a ausência do timo impede diretamente a diferenciação de plasmócitos."
+      ],
+      correctIndexes: [0, 2],
+      explanation: "O paracórtex do linfonodo e a PALS (bainha linfática periarteriolar) do baço são as zonas T-DEPENDENTES dos órgãos linfoides secundários — dependem de linfócitos T vindos do timo para se desenvolverem normalmente. Os folículos linfoides (zona B) são T-independentes (dependem de linfócitos B, que se originam na medula óssea, não no timo). Os seios subcapsulares são estruturas de drenagem linfática, não diretamente ligadas à produção de linfócitos T. A medula do linfonodo contém plasmócitos derivados de linfócitos B — a timectomia pode reduzir indiretamente a resposta T-dependente, mas a afirmativa erra ao dizer que a ausência do timo impede diretamente a diferenciação de plasmócitos."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "A imagem mostra um esfregaço de sangue periférico. A célula indicada no painel A (seta 1A) apresenta núcleo grande ocupando quase toda a célula, cromatina condensada, citoplasma escasso e ausência de grânulos evidentes. Assinale a alternativa que identifica corretamente essa célula e sua relação com o timo:",
+      image: "assets/img/prova1/sangue-leucocitos.jpg",
+      imageAlt: "Esfregaço de sangue periférico com leucócitos indicados",
+      imageCaption: "Esfregaço de sangue periférico — painéis A, B e C (400x).",
+      options: [
+        "Linfócito; ao migrar para o timo, passa por processos de seleção positiva e negativa, fundamentais para a tolerância imunológica.",
+        "Neutrófilo bastonete; amadurece na corrente sanguínea após contato com antígeno.",
+        "Monócito; é a maior célula sanguínea e se diferencia em macrófago tecidual.",
+        "Eosinófilo; migra para o tecido conjuntivo e libera histamina.",
+        "Neutrófilo segmentado; migra para linfonodos e apresenta antígeno a células T."
+      ],
+      correctIndex: 0,
+      explanation: "A morfologia descrita (núcleo grande ocupando quase toda a célula, cromatina densa, citoplasma escasso, sem grânulos) é típica de LINFÓCITO. Entre as células listadas, apenas os linfócitos (precursores T) passam pelo timo, onde sofrem seleção positiva (no córtex) e negativa (na medula). Neutrófilos, monócitos e eosinófilos se diferenciam na medula óssea e não passam por seleção tímica."
+    },
+    {
+      type: "single",
+      points: 5,
+      prompt: "No modelo anatômico do estômago, a seta aponta para uma cadeia de linfonodos localizada ao longo da grande curvatura, acompanhando os vasos gastroepiploicos. Assinale o nome correto dessa cadeia:",
+      image: "assets/img/prova1/anat-gastromentais.jpg",
+      imageAlt: "Modelo anatômico do estômago com seta indicando cadeia de linfonodos",
+      options: [
+        "Linfonodos gastromentais (gastroepiploicos)",
+        "Linfonodos celíacos",
+        "Linfonodos pilóricos",
+        "Linfonodos esplênicos",
+        "Linfonodos hepáticos"
+      ],
+      correctIndex: 0,
+      explanation: "Os linfonodos gastromentais (ou gastroepiploicos) acompanham os vasos gastroepiploicos ao longo da grande curvatura do estômago, drenando a parede gástrica e parte do grande omento."
+    },
+    {
+      type: "single",
+      points: 5,
+      prompt: "A seta indica uma cadeia de linfonodos localizada no retroperitônio, próxima aos grandes vasos (aorta e veia cava inferior), relacionada à drenagem do rim direito e estruturas adjacentes. Assinale a alternativa correta:",
+      image: "assets/img/prova1/anat-lombares.jpg",
+      imageAlt: "Modelo anatômico retroperitoneal com seta indicando cadeia de linfonodos",
+      options: [
+        "Linfonodos lombares (cavais) direitos",
+        "Linfonodos ilíacos comuns",
+        "Linfonodos mesentéricos superiores",
+        "Linfonodos para-aórticos esquerdos",
+        "Linfonodos renais esquerdos"
+      ],
+      correctIndex: 0,
+      explanation: "Os linfonodos lombares (também chamados cavais, à direita, ou aórticos, à esquerda) situam-se no retroperitônio, ao longo da veia cava inferior e da aorta, drenando rins, glândulas suprarrenais e parede abdominal posterior."
+    },
+    {
+      type: "single",
+      points: 5,
+      prompt: "No modelo de cabeça, pescoço e tórax, a seta aponta para linfonodos localizados próximos à bifurcação da traqueia e dos brônquios principais. Assinale a alternativa correta:",
+      image: "assets/img/prova1/anat-traqueobronquiais.jpg",
+      imageAlt: "Modelo anatômico de pescoço e tórax com seta indicando cadeia de linfonodos",
+      options: [
+        "Linfonodos traqueobronquiais (do tórax)",
+        "Linfonodos cervicais profundos",
+        "Linfonodos axilares",
+        "Linfonodos mediastinais anteriores",
+        "Linfonodos supraclaviculares"
+      ],
+      correctIndex: 0,
+      explanation: "Os linfonodos traqueobronquiais situam-se próximos à bifurcação da traqueia e dos brônquios principais, drenando os pulmões e participando do estadiamento de neoplasias torácicas."
+    },
+    {
+      type: "single",
+      points: 5,
+      prompt: "A seta aponta para linfonodos superficiais localizados na região da virilha, próximos à veia safena magna. Assinale a alternativa correta:",
+      image: "assets/img/prova1/anat-inguinais.jpg",
+      imageAlt: "Modelo anatômico de membro inferior com seta indicando cadeia de linfonodos",
+      options: [
+        "Linfonodos inguinais superficiais",
+        "Linfonodos ilíacos externos",
+        "Linfonodos poplíteos",
+        "Linfonodos inguinais profundos",
+        "Linfonodos obturadores"
+      ],
+      correctIndex: 0,
+      explanation: "Os linfonodos inguinais superficiais situam-se no subcutâneo da região inguinal, próximos à veia safena magna, drenando a pele do membro inferior, períneo e parede abdominal inferior."
+    },
+    {
+      type: "single",
+      points: 5,
+      prompt: "A seta indica linfonodos localizados entre a cabeça do pâncreas e a curvatura do duodeno. Assinale a alternativa correta:",
+      image: "assets/img/prova1/anat-pancreaticoduodenais.jpg",
+      imageAlt: "Modelo anatômico de pâncreas e duodeno com seta indicando cadeia de linfonodos",
+      options: [
+        "Linfonodos pancreaticoduodenais",
+        "Linfonodos esplênicos",
+        "Linfonodos mesentéricos inferiores",
+        "Linfonodos hepáticos",
+        "Linfonodos pilóricos"
+      ],
+      correctIndex: 0,
+      explanation: "Os linfonodos pancreaticoduodenais situam-se entre a cabeça do pâncreas e a curvatura duodenal, acompanhando os vasos pancreaticoduodenais, drenando essa região e sendo relevantes no estadiamento de neoplasias periampulares."
+    },
+    {
+      type: "single",
+      points: 2,
+      prompt: "Cláudia, 32 anos, Rh negativa, é casada com Afonso, Rh positivo. Seus três primeiros filhos nasceram sem intercorrências; na quarta gestação, apresentou aborto espontâneo no primeiro trimestre. Qual o mecanismo de hipersensibilidade envolvido no quadro de Cláudia (incompatibilidade Rh materno-fetal)?",
+      options: [
+        "Hipersensibilidade tipo I (imediata, mediada por IgE)",
+        "Hipersensibilidade tipo II (citotóxica, mediada por anticorpo)",
+        "Hipersensibilidade tipo III (mediada por imunocomplexos)",
+        "Hipersensibilidade tipo IV (tardia, mediada por células)",
+        "Não há reação de hipersensibilidade envolvida"
+      ],
+      correctIndex: 1,
+      explanation: "A doença hemolítica do feto/recém-nascido por incompatibilidade Rh é um exemplo clássico de hipersensibilidade tipo II: anticorpos IgG maternos anti-D se ligam diretamente ao antígeno D presente nas hemácias fetais, levando à sua opsonização e destruição (principalmente no baço fetal)."
+    },
+    {
+      type: "single",
+      points: 2,
+      prompt: "A tipagem sanguínea ABO/Rh da família mostrou que, dos três primeiros filhos de Cláudia e Afonso, apenas a 3ª filha (Alana) nasceu Rh positiva — os dois primeiros (Rodrigo e Roberta) são Rh negativos. Em qual gestação ocorreu a sensibilização materna inicial (produção de anti-D)?",
+      options: [
+        "Na 1ª gestação (Rodrigo)",
+        "Na 2ª gestação (Roberta)",
+        "Na 3ª gestação (Alana)",
+        "Na própria 4ª gestação (a que terminou em aborto)",
+        "Antes da primeira gestação"
+      ],
+      correctIndex: 2,
+      explanation: "Como apenas Alana (3ª gestação) é Rh positiva, foi nessa gestação (ou no parto) que ocorreu a passagem de hemácias fetais Rh+ para a circulação materna, sensibilizando o sistema imune de Cláudia (Rh-) e iniciando a produção de anticorpos anti-D."
+    },
+    {
+      type: "single",
+      points: 2,
+      prompt: "Por que o aborto espontâneo de Cláudia ocorreu na 4ª gestação, e não antes?",
+      options: [
+        "Porque a mãe só passou a ser Rh negativa a partir da 4ª gestação.",
+        "Porque a resposta imune primária (sensibilização) já havia ocorrido na 3ª gestação (Alana); na exposição seguinte, ocorreu resposta secundária rápida, com produção de IgG anti-D em alta titulação, capaz de atravessar a placenta e causar hemólise grave no feto.",
+        "Porque o 4º filho era Rh negativo, incompatível com o pai Rh positivo.",
+        "Porque anticorpos IgM maternos atravessaram a placenta e destruíram as hemácias fetais.",
+        "Porque houve uma transfusão sanguínea incompatível durante o parto anterior."
+      ],
+      correctIndex: 1,
+      explanation: "A sensibilização (resposta primária) ocorreu na gestação de Alana. Em uma nova exposição a hemácias Rh+ (4ª gestação), o sistema imune materno monta uma resposta secundária — rápida e intensa, com produção de grande quantidade de IgG anti-D, que atravessa a placenta facilmente e causa hemólise grave das hemácias fetais, comprometendo a viabilidade da gestação. IgM (diferente de IgG) não atravessa a placenta."
+    },
+    {
+      type: "single",
+      points: 2,
+      prompt: "Qual conduta, realizada em até 72 horas pós-parto (ou após qualquer evento sensibilizante), poderia ter evitado a sensibilização de Cláudia e o aborto subsequente?",
+      options: [
+        "Transfusão de concentrado de hemácias Rh negativo",
+        "Administração de imunoglobulina anti-D (Rhogam)",
+        "Plasmaférese materna",
+        "Corticoterapia materna em altas doses",
+        "Administração de imunoglobulina anti-A/anti-B"
+      ],
+      correctIndex: 1,
+      explanation: "O Rhogam (imunoglobulina anti-D) é administrado a gestantes Rh negativas para neutralizar hemácias fetais Rh positivas que entrem na circulação materna, impedindo a sensibilização do sistema imune da mãe e prevenindo a aloimunização em gestações futuras."
+    },
+    {
+      type: "single",
+      points: 4,
+      prompt: "Com base na tipagem sanguínea (sistemas ABO e Rh) da família — Afonso (O Rh+), Cláudia (A Rh-), Rodrigo (O Rh-), Roberta (A Rh-) e Alana (O Rh+) — avalie as possibilidades de doação segura de sangue entre os membros. Assinale a alternativa CORRETA:",
+      image: "assets/img/prova1/tipagem-sanguinea.png",
+      imageAlt: "Tabela de tipagem sanguínea da família com reações de aglutinação Anti-A, Anti-B e Anti-D",
+      imageCaption: "Tipagem sanguínea da família (reação de aglutinação = antígeno presente).",
+      options: [
+        "Rodrigo (O Rh-) pode doar para Roberta (A Rh-), pois o tipo O não possui antígenos A nem B, e ambos são Rh negativos.",
+        "Afonso (O Rh+) pode doar para Cláudia (A Rh-), pois o Rh positivo é sempre compatível com o Rh negativo.",
+        "Alana (O Rh+) pode doar para Rodrigo (O Rh-), pois ambos são do grupo O.",
+        "Cláudia (A Rh-) pode doar para Afonso (O Rh+), pois o tipo A é compatível com o tipo O.",
+        "Roberta (A Rh-) pode doar para Alana (O Rh+), pois o fator Rh diferente não interfere na compatibilidade ABO."
+      ],
+      correctIndex: 0,
+      explanation: "Rodrigo é tipo O Rh negativo: não possui antígenos A, B nem D, por isso é compatível como doador para qualquer receptor Rh negativo do sistema ABO, incluindo Roberta (A Rh-). As demais opções envolvem doar sangue Rh POSITIVO para receptor Rh NEGATIVO (sempre inseguro, risco de sensibilização) ou doar hemácias com antígeno A ou B para receptor cujo plasma tem anticorpos contra esse antígeno (incompatibilidade ABO)."
+    },
+    {
+      type: "single",
+      points: 4,
+      prompt: "Considerando a tipagem sanguínea da família, qual membro é o DOADOR UNIVERSAL de hemácias?",
+      options: ["Afonso", "Alana", "Cláudia", "Roberta", "Rodrigo"],
+      correctIndex: 4,
+      explanation: "O doador universal de hemácias é o tipo O Rh negativo, pois suas hemácias não expressam antígenos A, B nem D — não provocam reação em receptores de nenhum outro grupo ABO/Rh. Na família, apenas Rodrigo é O Rh negativo."
+    },
+    {
+      type: "single",
+      points: 4,
+      prompt: "Durante uma transfusão sanguínea, um paciente apresentou reação hemolítica imediata, caracterizada por febre, calafrios e hemoglobinúria, por incompatibilidade no sistema ABO. Qual o mecanismo imunológico envolvido?",
+      options: [
+        "Produção de anticorpos IgG de alta afinidade contra antígenos proteicos, com ativação tardia da resposta imune adaptativa.",
+        "Formação de imunocomplexos contendo IgA, com deposição em tecidos e ativação do complemento pela via alternativa.",
+        "Ativação de linfócitos T citotóxicos contra hemácias incompatíveis, promovendo lise celular direta.",
+        "Presença de anticorpos naturais do tipo IgM, capazes de aglutinar hemácias e ativar rapidamente o sistema complemento.",
+        "Produção de anticorpos IgE específicos contra antígenos eritrocitários, levando à degranulação de mastócitos."
+      ],
+      correctIndex: 3,
+      explanation: "Os anticorpos anti-A e anti-B do sistema ABO são, em sua maioria, anticorpos NATURAIS do tipo IgM — presentes mesmo sem exposição prévia conhecida, pois reagem de forma cruzada com antígenos semelhantes de bactérias da flora intestinal. Por serem pentaméricos, os IgM são muito eficientes em aglutinar hemácias e ativar o sistema complemento pela via clássica, causando hemólise intravascular imediata e os sintomas típicos (febre, calafrios, hemoglobinúria)."
+    }
+  ]
+};
+renderExam(examData);
+</script>
+</body>
+</html>
