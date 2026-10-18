@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Prova 5 — PCR e Inflamação: Fundamentos</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>PROVA 5</h1>
+    <p>Proteína C Reativa e Inflamação — Fundamentos e Fisiopatologia</p>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">&larr; Voltar para a lista de provas</a></div>
+
+<main>
+  <div id="quiz-app"></div>
+</main>
+
+<footer class="site-footer">
+  Material de estudo pessoal — uso educacional não comercial.
+</footer>
+
+<script src="assets/js/engine.js"></script>
+<script>
+const examData = {
+  title: "PROVA 5 — PCR e Inflamação: Fundamentos e Fisiopatologia",
+  subject: "Proteína C Reativa (PCR) · Via clássica do complemento · Cinética da fase aguda · Hemograma em processos infecciosos",
+  questions: [
+    {
+      type: "single",
+      points: 15,
+      prompt: "Sobre as características gerais da Proteína C-Reativa (PCR), assinale a alternativa correta:",
+      options: [
+        "É sintetizada nos hepatócitos, tem estrutura semelhante ao domínio CH3 da IgG humana (5 subunidades de 23.000 d cada) e foi descrita inicialmente por Tillet e Francis em 1930.",
+        "É sintetizada pelos linfócitos B, sendo um tipo de anticorpo específico contra o polissacarídeo C do pneumococo.",
+        "É uma proteína estrutural do citoesqueleto, sem relação com processos inflamatórios.",
+        "É encontrada normalmente em concentrações superiores a 10 mg/mL no soro de indivíduos saudáveis.",
+        "Foi descrita pela primeira vez na década de 1980, como marcador tumoral específico."
+      ],
+      correctIndex: 0,
+      explanation: "A PCR foi descrita inicialmente por Tillet e Francis em 1930. É sintetizada nos hepatócitos (não por linfócitos), tem estrutura semelhante ao domínio CH3 da IgG humana, formada por 5 subunidades de 23.000 daltons cada. Em pessoas saudáveis, é normalmente encontrada em concentrações baixas (inferiores a 1 μg/mL), e não é um marcador tumoral específico, mas sim de fase aguda inflamatória."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem ilustra a via de sinalização pela qual um estímulo inflamatório leva à produção hepática de PCR, envolvendo IL-6 e a via JAK/STAT3. Assinale a alternativa correta sobre esse mecanismo:",
+      image: "assets/img/prova5/pcr-sintese-cronica.jpg",
+      imageAlt: "Diagrama da via de sinalização IL-6/JAK/STAT3 levando à síntese hepática de PCR",
+      options: [
+        "A IL-6, liberada durante processos inflamatórios, sinaliza para os hepatócitos via JAK/STAT3, aumentando a expressão do gene da PCR e sua secreção para o plasma.",
+        "A PCR é sintetizada diretamente pelos neutrófilos no foco inflamatório, sem necessidade de sinalização hepática.",
+        "A IL-6 inibe a produção de PCR pelos hepatócitos, sendo um mecanismo de retroalimentação negativa.",
+        "A via JAK/STAT3 é ativada exclusivamente em infecções virais, não em processos bacterianos.",
+        "O fígado produz PCR de forma constitutiva e constante, independentemente de estímulos inflamatórios."
+      ],
+      correctIndex: 0,
+      explanation: "Durante processos inflamatórios ou infecciosos, citocinas como IL-6 (e IL-1β) são liberadas e sinalizam para os hepatócitos através da via JAK/STAT3, aumentando a expressão do gene da PCR e sua secreção para o plasma como proteína de fase aguda. Esse mecanismo ocorre em resposta a estímulos inflamatórios diversos (infecciosos ou não), e não é constitutivo nem exclusivo de infecções virais."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "Observe a curva de cinética da PCR na imagem (elevação em horas, pico em 1-3 dias, declínio após). Sobre a cinética da PCR em processos inflamatórios agudos, assinale a alternativa correta:",
+      image: "assets/img/prova5/pcr-cinetica-hemograma.jpg",
+      imageAlt: "Gráfico de cinética da PCR e tabela de hemograma",
+      options: [
+        "Em reações inflamatórias ou necróticas, os níveis de PCR elevam-se em poucas horas (cerca de 2h), dobrando a cada 8,2h e atingindo pico máximo em 1-3 dias; como sua vida média é curta (19h), os níveis caem rapidamente quando a inflamação diminui.",
+        "A PCR demora semanas para se elevar após um estímulo inflamatório, sendo um marcador tardio.",
+        "A PCR tem meia-vida de várias semanas, permanecendo elevada por longos períodos mesmo após resolução da inflamação.",
+        "Uma vez elevada, a PCR não retorna aos valores basais, mesmo com resolução completa do processo inflamatório.",
+        "O pico de elevação da PCR ocorre imediatamente (minutos) após o estímulo inflamatório."
+      ],
+      correctIndex: 0,
+      explanation: "A PCR é um marcador de fase aguda de elevação rápida: sobe em poucas horas (~2h), dobra de concentração a cada 8,2h, atingindo pico em 1-3 dias após a injúria. Sua meia-vida curta (19h) faz com que os níveis caiam rapidamente assim que o processo inflamatório diminui — por isso é útil tanto para diagnóstico quanto para acompanhamento da evolução/tratamento de doenças inflamatórias ou necróticas já diagnosticadas."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem mostra a via clássica de ativação do complemento. A PCR é capaz de ativar essa via ao se ligar a determinados alvos. Assinale a alternativa correta:",
+      image: "assets/img/prova5/complemento-via-classica.jpg",
+      imageAlt: "Diagrama da via clássica de ativação do complemento",
+      options: [
+        "A PCR ativa a via clássica do complemento na presença de Ca++, ao se ligar ao polissacarídeo C (de pneumococo) ou a lipossomos contendo fosforilcolina, promovendo aderência e fagocitose mediadas pelo complemento.",
+        "A PCR ativa exclusivamente a via alternativa do complemento, nunca a via clássica.",
+        "A ativação do complemento pela PCR independe de cálcio (Ca++).",
+        "A PCR inibe a via clássica do complemento, funcionando como uma proteína reguladora negativa.",
+        "A via clássica do complemento é ativada pela PCR apenas na presença de anticorpos IgE específicos."
+      ],
+      correctIndex: 0,
+      explanation: "A PCR ativa a via clássica do complemento na presença de Ca++, ao se ligar ao polissacarídeo C de pneumococo (origem do seu nome: 'C-reativa') ou a lipossomos contendo fosforilcolina — de forma análoga à ligação do complemento a complexos antígeno-anticorpo. Isso promove reações dependentes de complemento, como aderência e fagocitose de células lesadas ou patógenos, atuando como um imunorregulador em inflamações agudas."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "Um paciente apresenta o seguinte hemograma: Hemácias 4,80 milhões/mm³ (ref. 4,0-5,5), Leucócitos 15.000/mm³ (ref. 4.000-11.000), Neutrófilos segmentados 82% - 12.300/mm³ (ref. 40-70%), Linfócitos 9% - 1.350/mm³ (ref. 20-45%), Plaquetas 280.000/mm³ (ref. 150.000-450.000). Assinale a alternativa que melhor interpreta esse quadro:",
+      options: [
+        "Leucocitose com neutrofilia e linfopenia relativa — padrão sugestivo de processo infeccioso/inflamatório agudo, frequentemente de etiologia bacteriana.",
+        "Leucopenia com linfocitose — padrão clássico de infecção viral.",
+        "Anemia com trombocitopenia — padrão sugestivo de aplasia medular.",
+        "Todos os parâmetros estão dentro da normalidade, sem significado clínico.",
+        "Eosinofilia importante — padrão sugestivo de infecção parasitária."
+      ],
+      correctIndex: 0,
+      explanation: "O hemograma mostra leucocitose (15.000/mm³, acima do limite superior de 11.000) às custas de neutrofilia (82%, bem acima de 40-70%) com linfopenia relativa (9%, abaixo de 20-45%) — um padrão clássico de resposta inflamatória/infecciosa aguda, mais sugestivo de etiologia bacteriana do que viral (que tipicamente cursa com leucopenia e linfocitose relativa). Hemácias e plaquetas estão dentro da faixa de referência nesse caso."
+    },
+    {
+      type: "multiple",
+      points: 15,
+      prompt: "A PCR é um marcador extremamente inespecífico, podendo estar elevada em diversas condições clínicas. Selecione TODAS as condições citadas como causadoras de valores elevados de PCR:",
+      options: [
+        "Febre reumática e artrite reumatoide",
+        "Infarto agudo do miocárdio",
+        "Intervenções cirúrgicas (útil como indicador de complicações inflamatórias/sépticas)",
+        "Hipotireoidismo subclínico assintomático",
+        "Queimaduras e processos neoplásicos"
+      ],
+      correctIndexes: [0, 1, 2, 4],
+      explanation: "O texto cita como causas de valores elevados de PCR: febre reumática, artrite reumatoide (até 85%), esclerose múltipla, tumores malignos, poliartrite, vasculite sistêmica, polimialgia reumática, infarto do miocárdio (94%), intervenções cirúrgicas (útil como indicador de complicações inflamatórias ou sépticas), queimaduras e processos neoplásicos. Hipotireoidismo subclínico assintomático não é um processo inflamatório/necrótico agudo e não consta entre as causas citadas de elevação da PCR."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "Sobre a utilidade clínica e as limitações da PCR como exame diagnóstico, assinale a alternativa correta:",
+      options: [
+        "A PCR é extremamente inespecífica: quando positiva, indica a existência de um processo inflamatório agudo ou necrótico, cuja origem deve ser investigada por testes específicos — mas também é útil para acompanhar a evolução ou resposta ao tratamento de doenças já diagnosticadas.",
+        "A PCR é um exame altamente específico, capaz de identificar sozinho o agente etiológico exato de uma infecção.",
+        "A PCR só tem utilidade no diagnóstico inicial, sendo inútil para acompanhamento terapêutico.",
+        "Um valor elevado de PCR permite diferenciar, isoladamente, infecção bacteriana de infecção viral com total precisão.",
+        "A PCR não se altera em pacientes queimados ou em pós-operatório."
+      ],
+      correctIndex: 0,
+      explanation: "Por ser extremamente inespecífica, a PCR positiva apenas sinaliza a existência de um processo inflamatório agudo ou necrótico — a origem precisa ser investigada por testes específicos direcionados pela clínica. Por outro lado, justamente por seus níveis se correlacionarem com a intensidade da injúria, é um bom marcador para acompanhar a evolução e resposta ao tratamento de doenças inflamatórias/necróticas já diagnosticadas."
+    }
+  ]
+};
+renderExam(examData);
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Prova 3 — Parasitologia: Helmintos</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>PROVA 3</h1>
+    <p>Parasitologia — Morfologia e Ciclo de Helmintos</p>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">&larr; Voltar para a lista de provas</a></div>
+
+<main>
+  <div id="quiz-app"></div>
+</main>
+
+<footer class="site-footer">
+  Material de estudo pessoal — uso educacional não comercial.
+</footer>
+
+<script src="assets/js/engine.js"></script>
+<script>
+const examData = {
+  title: "PROVA 3 — Parasitologia: Helmintos",
+  subject: "Ascaris lumbricoides · Enterobius vermicularis · Schistosoma mansoni · Biomphalaria (hospedeiro intermediário)",
+  questions: [
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem mostra dois espécimes adultos de Ascaris lumbricoides corados, identificados como fêmea e macho. Assinale a alternativa correta sobre a diferenciação morfológica entre os sexos:",
+      image: "assets/img/prova3/ascaris-adultos.jpg",
+      imageAlt: "Vermes adultos de Ascaris lumbricoides, fêmea e macho",
+      options: [
+        "A fêmea é maior (30-40cm) e tem extremidade posterior retilínea; o macho é menor (20-30cm) e tem extremidade posterior fortemente curvada.",
+        "O macho é maior que a fêmea, e ambos têm extremidade posterior retilínea.",
+        "A fêmea tem extremidade posterior curvada (para facilitar a cópula) e o macho tem extremidade retilínea.",
+        "Não há dimorfismo sexual em Ascaris lumbricoides — machos e fêmeas são morfologicamente idênticos.",
+        "A fêmea é identificada pela presença de ventosas, ausentes no macho."
+      ],
+      correctIndex: 0,
+      explanation: "Ascaris lumbricoides apresenta dimorfismo sexual: a fêmea é maior (30-40cm x 2-6mm) com extremidade posterior retilínea, enquanto o macho é menor (20-30cm x 2-6mm) com extremidade posterior fortemente curvada (característica que auxilia na cópula). Ventosas são estruturas de Trematoda (ex.: Schistosoma), não de Nematoda como Ascaris."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "Observe o diagrama esquemático de Ascaris lumbricoides, com as estruturas da fêmea (boca, linha lateral, poro excretor, poro genital feminino, ânus) e do macho (boca, linha lateral, poro excretor, cloaca, espículas copulatórias). Assinale a alternativa correta:",
+      image: "assets/img/prova3/ascaris-diagrama.jpg",
+      imageAlt: "Diagrama esquemático de Ascaris lumbricoides fêmea e macho com estruturas indicadas",
+      options: [
+        "As espículas copulatórias são estruturas exclusivas do macho, localizadas próximas à cloaca, e auxiliam na transferência de espermatozoides durante a cópula.",
+        "O poro genital feminino está localizado na extremidade posterior da fêmea, próximo ao ânus.",
+        "A cloaca é uma estrutura exclusiva da fêmea, onde se abrem o sistema digestivo e o reprodutivo.",
+        "A boca de Ascaris lumbricoides possui quatro lábios, dispostos em cruz.",
+        "O poro excretor está ausente no macho, presente apenas na fêmea."
+      ],
+      correctIndex: 0,
+      explanation: "As espículas copulatórias são estruturas exclusivas do macho (próximas à cloaca, onde se unem os sistemas digestivo e reprodutor masculino), usadas para manter a vulva da fêmea aberta durante a cópula. O poro genital feminino fica na região média/anterior do corpo da fêmea (não na extremidade posterior). A boca de Ascaris tem três lábios (não quatro). O poro excretor está presente em ambos os sexos."
+    },
+    {
+      type: "truefalse-group",
+      points: 15,
+      prompt: "Os helmintos de interesse médico são classificados em diferentes filos e classes, cada um com características morfológicas próprias. Classifique as afirmações a seguir como Verdadeiras ou Falsas:",
+      items: [
+        { text: "Platyhelminthes (do grego 'platy' = chato) são achatados dorsoventralmente e apresentam simetria bilateral.", correct: true },
+        { text: "A classe Trematoda (ex.: Schistosoma mansoni) tem corpo longo e segmentado, dividido em escólex, colo e estróbilo.", correct: false },
+        { text: "A classe Cestoda (ex.: Taenia sp.) apresenta corpo segmentado (escólex, colo e estróbilo), diferente da Trematoda, que tem corpo não segmentado.", correct: true },
+        { text: "O filo Nematoda (ex.: Ascaris lumbricoides) é dioico — ou seja, possui sexos separados, sendo o macho tipicamente menor que a fêmea.", correct: true },
+        { text: "Trematodas like Schistosoma mansoni não possuem órgãos de fixação, diferente dos Cestoda, que se fixam por ventosas.", correct: false }
+      ],
+      explanation: "Platyhelminthes (chatos, simetria bilateral) dividem-se em Trematoda (corpo NÃO segmentado, com ventosas de fixação — ex.: Schistosoma, Fasciola) e Cestoda (corpo segmentado em escólex, colo e estróbilo — ex.: Taenia). O filo Nematoda (cilíndricos, alongados) é dioico, com machos geralmente menores que as fêmeas. Portanto, a descrição de corpo segmentado pertence à Cestoda, não à Trematoda — e são justamente os Trematoda (não os Cestoda) que apresentam ventosas como órgão de fixação."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem mostra um ovo de helminto visualizado ao microscópio, com membrana externa mamilonada bem evidente. Considerando as características dos ovos de Ascaris lumbricoides, assinale a alternativa correta:",
+      image: "assets/img/prova3/ascaris-ovo.jpg",
+      imageAlt: "Ovo de Ascaris lumbricoides ao microscópio com membrana mamilonada",
+      options: [
+        "Ovos férteis de Ascaris lumbricoides medem 50-60 μm, têm membrana externa mamilonada (que facilita a aderência e disseminação) e, no interior, massa de células germinativas ou larva.",
+        "Ovos férteis de Ascaris lumbricoides são sempre decorticados (sem a membrana mamilonada) e medem mais de 150 μm.",
+        "A membrana mamilonada é impermeável à água e é a camada mais interna do ovo, diretamente em contato com a larva.",
+        "Ovos inférteis de Ascaris são arredondados, menores que os férteis, e não apresentam citoplasma granuloso.",
+        "A presença de membrana mamilonada é exclusiva dos ovos de Schistosoma mansoni."
+      ],
+      correctIndex: 0,
+      explanation: "O ovo fértil de Ascaris lumbricoides mede 50-60 μm e tem três membranas: a mamilonada (externa, facilita a aderência e disseminação), a hialina/lisa (média, formada por quitina associada a proteínas, resistente) e a lipídica (interna, impermeável à água). Ovos 'decorticados' são aqueles que perderam a membrana mamilonada (ainda são férteis). Ovos inférteis são tipicamente mais alongados, com membrana mamilonada fina e citoplasma granuloso — não arredondados e lisos como a opção descreve."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem mostra um verme adulto macho de Schistosoma mansoni ao microscópio. Sobre a morfologia e o ciclo desse helminto, assinale a alternativa correta:",
+      image: "assets/img/prova3/schistosoma-adulto.jpg",
+      imageAlt: "Verme adulto macho de Schistosoma mansoni ao microscópio",
+      options: [
+        "O macho possui canal ginecóforo, uma fenda ventral longitudinal onde aloja a fêmea (mais fina e alongada) durante a cópula permanente; ambos têm ventosa oral e ventral.",
+        "A fêmea é maior e mais robusta que o macho, e é ela quem possui o canal ginecóforo.",
+        "A forma infectante de Schistosoma mansoni para o ser humano é o ovo, ingerido com água contaminada.",
+        "O ciclo de Schistosoma mansoni não envolve hospedeiro intermediário — a transmissão ocorre diretamente entre humanos.",
+        "A cercária penetra no hospedeiro humano através da ingestão oral, nunca pela pele."
+      ],
+      correctIndex: 0,
+      explanation: "O macho de S. mansoni (1cm x 0,1cm) é mais robusto e possui o canal ginecóforo — uma fenda ventral longitudinal onde aloja a fêmea (mais fina e alongada, 1,2-1,6cm) em cópula permanente. Ambos têm ventosa oral e ventral. A forma infectante para o humano é a CERCÁRIA (não o ovo), que penetra ativamente através da pele e mucosas. O ciclo envolve obrigatoriamente um hospedeiro intermediário: o caramujo do gênero Biomphalaria."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem compara a concha de diferentes espécies de caramujos de água doce usados na identificação do hospedeiro intermediário de Schistosoma mansoni. Assinale a alternativa correta:",
+      image: "assets/img/prova3/biomphalaria-chart.jpg",
+      imageAlt: "Comparação de conchas de caramujos Biomphalaria e espécies semelhantes",
+      options: [
+        "Biomphalaria spp. são os hospedeiros intermediários de Schistosoma mansoni no Brasil; suas conchas têm formato espiral plano (discoide), diferente do caramujo de jardim (Cornu aspersum), cuja concha é estufada e enrolada em torno de um eixo central.",
+        "Qualquer espécie de caramujo pode servir como hospedeiro intermediário de Schistosoma mansoni, não havendo especificidade.",
+        "Biomphalaria spp. têm concha estufada e alongada, semelhante à do caramujo de jardim (Cornu aspersum).",
+        "O caramujo é o hospedeiro definitivo de Schistosoma mansoni, onde ocorre a reprodução sexuada do parasito.",
+        "Biomphalaria spp. medem entre 10 e 15 cm de diâmetro, bem maiores que o caramujo de jardim."
+      ],
+      correctIndex: 0,
+      explanation: "Biomphalaria spp. (hospedeiro intermediário de S. mansoni no Brasil) tem concha espiral de forma PLANA (discoide), 3-4cm de diâmetro, com depressão central amarronzada — diferente do caramujo de jardim comum (Cornu aspersum), que tem concha ESTUFADA, enrolada ao redor de um eixo central. O caramujo é o hospedeiro INTERMEDIÁRIO (onde ocorre reprodução assexuada — esporocistos gerando cercárias); o ser humano é o hospedeiro definitivo (reprodução sexuada dos vermes adultos)."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "Sobre Enterobius vermicularis (oxiúro), causador da enterobíase/oxiurose, assinale a alternativa correta:",
+      options: [
+        "O ovo tem formato de letra 'D', mede cerca de 50μm x 20μm, e o método diagnóstico de escolha é a fita gomada (método de Graham), já que os ovos raramente são encontrados nas fezes.",
+        "O diagnóstico de Enterobius vermicularis é feito preferencialmente pelo método de Kato-Katz, padrão-ouro para esse parasito.",
+        "A fêmea deposita seus ovos no intestino delgado, de onde são eliminados diretamente nas fezes em grande quantidade.",
+        "O ovo de Enterobius vermicularis é esférico, mede mais de 100μm, e possui espículo lateral.",
+        "A forma infectante de Enterobius vermicularis é a larva filarioide, que penetra ativamente pela pele perianal."
+      ],
+      correctIndex: 0,
+      explanation: "O ovo de Enterobius vermicularis tem aspecto de letra 'D' (achatado de um lado), mede cerca de 50μm x 20μm, com membrana lisa, dupla e transparente, geralmente já contendo a larva. A fêmea migra à noite até a região perianal para depositar os ovos (não no intestino, não eliminados em grande quantidade nas fezes), por isso o método de escolha é a fita gomada perianal (método de Graham), e não o Kato-Katz (específico para S. mansoni) nem o exame comum de fezes."
+    }
+  ]
+};
+renderExam(examData);
+</script>
+</body>
+</html>

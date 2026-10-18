@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Prova 4 — Parasitologia: Diagnóstico e Patologia</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>PROVA 4</h1>
+    <p>Parasitologia — Diagnóstico Laboratorial e Patologia</p>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">&larr; Voltar para a lista de provas</a></div>
+
+<main>
+  <div id="quiz-app"></div>
+</main>
+
+<footer class="site-footer">
+  Material de estudo pessoal — uso educacional não comercial.
+</footer>
+
+<script src="assets/js/engine.js"></script>
+<script>
+const examData = {
+  title: "PROVA 4 — Parasitologia: Diagnóstico Laboratorial e Patologia",
+  subject: "Métodos de EPF (Hoffman, Paratest, Kato-Katz, Baermann-Moraes/Rugai) · Granuloma esquistossomótico · Cestoda",
+  questions: [
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem mostra as etapas da técnica utilizada na pesquisa de ovos de helmintos, especialmente de Schistosoma mansoni, para cálculo de ovos por grama de fezes (OPG). Assinale a alternativa correta sobre esse método:",
+      image: "assets/img/prova4/kato-katz-tecnica.jpg",
+      imageAlt: "Etapas da técnica de Kato-Katz para pesquisa de ovos de helmintos",
+      options: [
+        "É o método de Kato-Katz, padrão-ouro do Ministério da Saúde e da OMS para diagnóstico da infecção por Schistosoma mansoni, pois permite quantificar a carga parasitária (ovos por grama de fezes).",
+        "É o método de Hoffman, Pons e Janer, baseado em sedimentação espontânea, sem capacidade de quantificação.",
+        "É o método de Baermann-Moraes, específico para pesquisa de larvas de Strongyloides stercoralis.",
+        "É o método do Paratestes, cuja principal vantagem é permitir a quantificação exata de ovos por grama de fezes.",
+        "É um método usado exclusivamente para o diagnóstico de protozoários intestinais."
+      ],
+      correctIndex: 0,
+      explanation: "O método de Kato-Katz é o padrão-ouro do Ministério da Saúde e da OMS para diagnóstico da infecção por S. mansoni, pois usa um molde padronizado (6mm de diâmetro x 1,5mm de espessura, 41,7mg de fezes por lâmina, fator de conversão 24) que permite calcular ovos por grama de fezes (OPG) — importante para estimar a intensidade da infecção e monitorar o impacto de medidas de controle. Hoffman e Paratestes são métodos de sedimentação espontânea, qualitativos, sem essa padronização quantitativa; Baermann-Moraes é específico para larvas de nematoides como Strongyloides."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "O método de Hoffman, Pons e Janer (ou método de Lutz) é amplamente utilizado em laboratórios de rotina para diagnóstico de enteroparasitoses. Assinale a alternativa correta sobre esse método:",
+      options: [
+        "Baseia-se em sedimentação espontânea; é barato e fácil de preparar, mas apresenta como desvantagens a presença de muitos detritos na amostra e um resultado mais demorado.",
+        "Baseia-se em centrifugação em alta rotação, sendo o método mais rápido disponível para pesquisa de ovos e larvas.",
+        "É específico para a pesquisa de larvas de Strongyloides stercoralis, através do termotropismo e hidrotropismo.",
+        "Tem como principal desvantagem o alto custo dos reagentes necessários.",
+        "Não é capaz de detectar ovos de helmintos, servindo apenas para cistos de protozoários."
+      ],
+      correctIndex: 0,
+      explanation: "O método de Hoffman, Pons e Janer (sedimentação espontânea) é usado para pesquisa de ovos e larvas de helmintos (especialmente estruturas pesadas). Suas vantagens são o baixo custo e a facilidade de preparo; as desvantagens são a amostra com muitos detritos (dificultando a leitura), ser inespecífico e demorado — diferente do Paratestes, que tem como vantagem a rapidez de execução, mantendo as mesmas desvantagens de detritos e inespecificidade."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "Comparando o método de Hoffman (Lutz) com o método do Paratestes, ambos baseados em sedimentação espontânea, assinale a alternativa correta:",
+      options: [
+        "A principal vantagem do Paratestes sobre o método de Hoffman é a rapidez de execução, mantendo as mesmas desvantagens (amostra com detritos e inespecificidade).",
+        "O Paratestes é um método de centrifugação, enquanto o de Hoffman é de flutuação — por isso são tecnicamente incomparáveis.",
+        "O método de Hoffman é mais rápido que o Paratestes, mas tem custo mais elevado.",
+        "Apenas o Paratestes é capaz de detectar ovos de Schistosoma mansoni; o método de Hoffman não detecta esse parasito.",
+        "O Paratestes dispensa completamente a necessidade de microscopia para a leitura do resultado."
+      ],
+      correctIndex: 0,
+      explanation: "Tanto o método de Hoffman (Lutz) quanto o Paratestes baseiam-se no princípio de sedimentação espontânea, com a mesma finalidade (pesquisa de ovos e larvas de helmintos, principalmente estruturas pesadas) e as mesmas desvantagens (amostra com muitos detritos, inespecífico). A diferença prática está na vantagem do Paratestes: maior rapidez de execução graças ao kit padronizado comercial."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "O método de Baermann-Moraes e Rugai é indicado especificamente na suspeita de estrongiloidíase. Assinale a alternativa correta sobre o princípio desse método:",
+      options: [
+        "Baseia-se no termotropismo e hidrotropismo positivos das larvas, que se movem ativamente em direção à água aquecida, permitindo sua pesquisa — é específico para larvas de Strongyloides stercoralis.",
+        "Baseia-se na flutuação de ovos leves em solução hipersaturada de açúcar.",
+        "Baseia-se na centrifugação da amostra fecal diluída em formol-éter, sendo o método mais sensível para protozoários.",
+        "Depende da coloração especial dos ovos por lugol, sem relação com movimento larvar.",
+        "É o método recomendado pela OMS para quantificação de ovos de Schistosoma mansoni."
+      ],
+      correctIndex: 0,
+      explanation: "O método de Baermann-Moraes (e sua variação, o método de Rugai) explora o termotropismo e hidrotropismo positivos das larvas de nematoides: elas se movem ativamente em direção a um gradiente de calor e água, permitindo sua separação e pesquisa. É especialmente indicado para Strongyloides stercoralis. Suas desvantagens incluem o odor da amostra e ser inespecífico para ovos e cistos (não detecta essas formas, apenas larvas móveis)."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem mostra um corte histológico de fígado com múltiplos nódulos (granulomas), um deles com um ovo visível em seu interior. Esse achado é característico da fase crônica da esquistossomose. Assinale a alternativa correta sobre a patogênese desse granuloma:",
+      image: "assets/img/prova4/granuloma-hepatico.jpg",
+      imageAlt: "Corte histológico de fígado mostrando granulomas esquistossomóticos com ovo no interior",
+      options: [
+        "O granuloma esquistossomótico é uma reação inflamatória crônica do hospedeiro contra antígenos liberados pelo ovo de S. mansoni retido no tecido (geralmente no fígado, via sistema porta), podendo evoluir para fibrose periportal.",
+        "O granuloma é formado exclusivamente por hemácias acumuladas ao redor do verme adulto morto, sem participação do sistema imune.",
+        "O granuloma esquistossomótico ocorre apenas nos pulmões, nunca no fígado.",
+        "A formação do granuloma independe da presença do ovo — é uma resposta a toxinas liberadas pela cercária durante a penetração cutânea.",
+        "O granuloma é um achado normal do parênquima hepático, sem relação com infecção parasitária."
+      ],
+      correctIndex: 0,
+      explanation: "Os ovos de S. mansoni, carreados pela circulação porta, ficam retidos no fígado (e também no intestino) e liberam antígenos que desencadeiam uma reação inflamatória granulomatosa crônica — uma resposta imune do tipo hipersensibilidade tardia (mediada por células T) ao redor do ovo. Granulomas repetidos e extensos podem evoluir para fibrose periportal (fibrose de Symmers), causando hipertensão porta — uma das complicações mais graves da esquistossomose crônica."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem mostra um campo microscópico de exame parasitológico de fezes (EPF) com múltiplas estruturas ovaladas de diferentes tamanhos, sugerindo infecção mista. Sobre a importância de se associar mais de um método de EPF na rotina laboratorial, assinale a alternativa correta:",
+      image: "assets/img/prova4/ovos-mistos.jpg",
+      imageAlt: "Campo microscópico com múltiplos ovos de helmintos em amostra fecal",
+      options: [
+        "É recomendado associar mais de um método de concentração (ex.: Hoffman + Baermann-Moraes), pois cada técnica tem maior sensibilidade para diferentes formas parasitárias, principalmente quando há baixa carga parasitária.",
+        "Um único método (qualquer um) é sempre suficiente para detectar todas as formas parasitárias presentes na amostra, independentemente da carga parasitária.",
+        "A associação de métodos é desnecessária, pois todos os métodos de EPF têm exatamente a mesma sensibilidade para ovos e larvas.",
+        "Apenas o método de Kato-Katz deve ser usado, substituindo todos os demais métodos de rotina.",
+        "A combinação de métodos só é indicada quando o paciente é assintomático."
+      ],
+      correctIndex: 0,
+      explanation: "Na rotina laboratorial, é importante associar mais de um método de concentração (ex.: sedimentação como Hoffman + métodos específicos como Baermann-Moraes para larvas) para aumentar a sensibilidade diagnóstica, principalmente quando há baixa carga parasitária. Cada técnica tem princípios e finalidades diferentes (estruturas pesadas, larvas móveis, ovos leves etc.), por isso nenhum método isolado detecta igualmente bem todas as formas parasitárias possíveis."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "A imagem mostra um frasco com proglotes (segmentos) de um helminto da classe Cestoda, provavelmente do gênero Taenia. Sobre as características dessa classe, assinale a alternativa correta:",
+      image: "assets/img/prova4/taenia-proglotes.jpg",
+      imageAlt: "Frasco com proglotes de Taenia sp.",
+      options: [
+        "Cestoda têm corpo achatado dorsoventralmente, longo e segmentado em escólex (cabeça de fixação), colo e estróbilo (cadeia de proglotes); cada proglote pode conter estruturas reprodutivas próprias.",
+        "Cestoda são vermes cilíndricos e não segmentados, com sexos separados (dioicos).",
+        "O escólex de Taenia sp. não possui estruturas de fixação, diferente de Schistosoma mansoni.",
+        "As proglotes de Taenia sp. são eliminadas apenas na forma de ovos isolados, nunca como segmentos inteiros.",
+        "Cestoda pertencem ao filo Nematoda, assim como Ascaris lumbricoides."
+      ],
+      correctIndex: 0,
+      explanation: "A classe Cestoda (filo Platyhelminthes, 'achatados') tem corpo longo e segmentado, dividido em escólex (estrutura de fixação, com ventosas e/ou ganchos), colo (região de crescimento) e estróbilo (cadeia de proglotes, cada uma com estruturas reprodutivas próprias — geralmente hermafroditas). Isso é diferente da Trematoda (não segmentada) e do filo Nematoda (cilíndricos, dioicos, como Ascaris). As proglotes grávidas de Taenia sp. podem ser eliminadas inteiras nas fezes, não apenas como ovos isolados."
+    }
+  ]
+};
+renderExam(examData);
+</script>
+</body>
+</html>

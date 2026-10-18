@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Prova 6 — PCR: Técnica de Aglutinação em Látex</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>PROVA 6</h1>
+    <p>Proteína C Reativa — Técnica Laboratorial (Aglutinação em Látex)</p>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">&larr; Voltar para a lista de provas</a></div>
+
+<main>
+  <div id="quiz-app"></div>
+</main>
+
+<footer class="site-footer">
+  Material de estudo pessoal — uso educacional não comercial.
+</footer>
+
+<script src="assets/js/engine.js"></script>
+<script>
+const examData = {
+  title: "PROVA 6 — PCR: Técnica de Aglutinação em Látex",
+  subject: "Princípio do teste · Técnica passo a passo · Leitura e interpretação do resultado",
+  questions: [
+    {
+      type: "single",
+      points: 15,
+      prompt: "A determinação qualitativa da PCR por aglutinação em látex é uma técnica prática e rápida. Sobre o princípio dessa técnica, assinale a alternativa correta:",
+      options: [
+        "Baseia-se na aglutinação de partículas de látex sensibilizadas com anticorpos anti-PCR humana (antígeno), quando misturadas a soro de pacientes contendo PCR em concentração igual ou superior a 6 mg/L.",
+        "Baseia-se na lise de hemácias sensibilizadas com PCR, em um teste análogo à prova de Coombs.",
+        "Baseia-se na amplificação de DNA por PCR (reação em cadeia da polimerase), sendo um teste molecular.",
+        "Baseia-se na migração eletroforética de proteínas séricas em gel de agarose.",
+        "Depende da fixação do complemento, sendo positivo quando NÃO há consumo de complemento pela amostra."
+      ],
+      correctIndex: 0,
+      explanation: "O teste de aglutinação em látex para PCR baseia-se na aglutinação de partículas de látex sensibilizadas com anticorpos anti-PCR humana (que funcionam como 'antígeno' no sentido reverso do teste), que aglutinam visivelmente quando misturadas a soro contendo PCR em concentração igual ou superior ao limite de detecção do kit (6 mg/L). Importante notar que a sigla 'PCR' aqui se refere à Proteína C-Reativa, não à reação em cadeia da polimerase (técnica molecular homônima)."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "Sobre a amostra, o kit e o limite de detecção do teste de aglutinação em látex para PCR descrito na aula prática, assinale a alternativa correta:",
+      options: [
+        "A amostra utilizada é o soro do paciente; o kit utilizado (PCR-Látex) tem limite de detecção de 6 mg/L, sendo um método qualitativo.",
+        "A amostra utilizada é a urina do paciente, com limite de detecção de 60 mg/L.",
+        "A amostra deve ser plasma heparinizado, nunca soro, pois a fibrina interfere na reação.",
+        "O método é quantitativo, fornecendo o valor exato da PCR em mg/L.",
+        "O limite de detecção do kit é de 0,6 mg/L, dez vezes mais sensível que os valores normalmente citados."
+      ],
+      correctIndex: 0,
+      explanation: "A amostra utilizada no teste é o SORO do paciente. O kit descrito (PCR-Látex, fabricantes Analisa e Wama) tem limite de detecção de 6 mg/L, e o método é QUALITATIVO (não fornece o valor exato, apenas indica se a PCR está acima ou abaixo do limite de detecção)."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "Sobre a sequência correta da técnica de aglutinação em látex para PCR, assinale a alternativa correta:",
+      options: [
+        "Deixar reagentes/amostras em temperatura ambiente → homogeneizar e pipetar o látex PCR → pipetar o soro e os controles → misturar com palito (um para cada amostra) → agitar a placa por 2 minutos → ler a presença ou ausência de aglutinação macroscópica imediatamente após.",
+        "Centrifugar a amostra a alta rotação por 10 minutos antes de qualquer outra etapa.",
+        "Incubar a placa em estufa a 37°C por 24 horas antes da leitura.",
+        "A leitura deve ser feita ao microscópio óptico em aumento de 1000x, nunca a olho nu.",
+        "Adicionar corante de Gram à mistura antes da agitação, para facilitar a visualização da aglutinação."
+      ],
+      correctIndex: 0,
+      explanation: "A técnica correta é: (1) deixar reagentes e amostras atingirem temperatura ambiente; (2) homogeneizar e pipetar 25 μL do látex PCR (antígeno) em cada área; (3) pipetar 25 μL do soro a ser analisado; (4) pipetar os controles positivo e negativo em outras áreas; (5) misturar com palitos distintos para cada amostra; (6) agitar a placa a 100 rpm por 2 minutos (ou movimento oscilatório manual); e então examinar IMEDIATAMENTE e MACROSCOPICAMENTE (a olho nu, sem necessidade de microscópio) a presença ou ausência de aglutinação."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "Observe os ícones esquemáticos de resultado 'Positivo' (há aglutinação) e 'Negativo' (não há aglutinação, suspensão homogênea). Assinale a alternativa correta sobre a leitura do teste:",
+      image: "assets/img/prova6/latex-positivo-negativo.jpg",
+      imageAlt: "Esquema de resultado positivo e negativo do teste de aglutinação em látex",
+      options: [
+        "Resultado negativo = ausência de aglutinação, suspensão homogênea semelhante ao controle negativo (PCR < 6 mg/L); resultado positivo = presença de aglutinação macroscópica, que pode variar de grumos finos a grosseiros (PCR ≥ 6 mg/L).",
+        "Resultado positivo = suspensão totalmente homogênea e leitosa, sem qualquer grumo visível.",
+        "Resultado negativo = formação de grumos grosseiros bem visíveis a olho nu.",
+        "A intensidade da aglutinação não tem relação com a concentração de PCR na amostra.",
+        "O resultado só pode ser considerado válido se lido 24 horas após a mistura dos reagentes."
+      ],
+      correctIndex: 0,
+      explanation: "Resultado NEGATIVO: ausência de aglutinação — a suspensão permanece homogênea, semelhante ao padrão do controle negativo, e o resultado é expresso como PCR inferior a 6 mg/L. Resultado POSITIVO: presença de aglutinação macroscópica (visualizam-se grumos, que podem variar de finos a grosseiros), indicando PCR igual ou superior a 6 mg/L."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem mostra uma placa de reação com 7 poços testados (A a G), identificados como: A = CRP Test Positive; B, C, D, F, G = CRP Test Negative. Observando as características visuais descritas na aula (aglutinação = grumos; ausência de aglutinação = suspensão leitosa homogênea), assinale a alternativa correta:",
+      image: "assets/img/prova6/latex-placa-resultado.jpg",
+      imageAlt: "Placa de reação com resultados de aglutinação em látex, poços A a G",
+      options: [
+        "O poço A, único a apresentar grumos visíveis de aglutinação, corresponde à amostra com PCR igual ou superior a 6 mg/L; os demais poços (B, C, D, F, G), com aspecto homogêneo e leitoso, correspondem a PCR inferior a 6 mg/L.",
+        "Todos os poços (A a G) apresentam o mesmo resultado, pois a técnica não permite diferenciação visual entre amostras.",
+        "O poço A é negativo, pois apresenta aspecto leitoso homogêneo, diferente dos demais.",
+        "Quanto mais poços testados simultaneamente, menor a confiabilidade do teste, independentemente do padrão de aglutinação.",
+        "A cor azul de fundo da placa indica, por si só, positividade da reação, independentemente da presença de grumos."
+      ],
+      correctIndex: 0,
+      explanation: "Conforme a identificação da própria imagem, apenas o poço A apresenta grumos de aglutinação visíveis (CRP Test Positive — PCR ≥ 6 mg/L); os poços B, C, D, F e G mantêm aspecto homogêneo e leitoso, sem grumos, caracterizando resultado negativo (PCR < 6 mg/L). A cor de fundo da placa é apenas para contraste visual, facilitando a observação dos grumos — não é, por si só, indicativa de positividade."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "Sobre as limitações do teste qualitativo de aglutinação em látex para PCR, assinale a alternativa correta:",
+      options: [
+        "Por ser um método qualitativo, o teste indica apenas se a PCR está acima ou abaixo do limite de detecção (6 mg/L), sem fornecer o valor exato — para quantificação precisa, são necessários métodos como nefelometria ou turbidimetria.",
+        "O teste de aglutinação em látex já fornece, por padrão, o valor numérico exato de PCR em mg/L.",
+        "O teste não sofre nenhuma interferência de erro técnico, sendo sempre 100% preciso independentemente da execução.",
+        "Resultados falso-positivos são impossíveis nesse tipo de teste.",
+        "O teste substitui completamente a necessidade de correlação clínica, servindo como diagnóstico definitivo isolado."
+      ],
+      correctIndex: 0,
+      explanation: "Como método qualitativo, o teste de aglutinação em látex apenas classifica o resultado como positivo (PCR ≥ 6 mg/L) ou negativo (PCR < 6 mg/L), sem fornecer o valor numérico exato. Quando é necessário monitorar a magnitude e a evolução exata dos níveis de PCR (por exemplo, para acompanhamento terapêutico), são empregados métodos quantitativos mais precisos, como nefelometria ou turbidimetria. Como todo teste laboratorial, está sujeito a erros técnicos (ex.: tempo de agitação incorreto) e deve sempre ser interpretado em conjunto com a clínica do paciente."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "Qual é o objetivo central da aula prática descrita, segundo o material da disciplina?",
+      options: [
+        "Realizar a determinação qualitativa de Proteína C Reativa empregando a técnica de aglutinação em látex.",
+        "Realizar o sequenciamento genético completo do paciente.",
+        "Quantificar com exatidão a concentração sérica de todas as imunoglobulinas (IgG, IgA, IgM, IgE).",
+        "Determinar o grupo sanguíneo ABO e Rh do paciente.",
+        "Realizar hemocultura para identificação do agente etiológico de uma sepse."
+      ],
+      correctIndex: 0,
+      explanation: "O objetivo declarado da aula prática é 'realizar a determinação qualitativa de proteína C reativa empregando a técnica de aglutinação em látex' — um teste rápido e simples para triagem de processos inflamatórios/infecciosos agudos, e não um exame genético, de tipagem sanguínea ou de identificação microbiológica."
+    }
+  ]
+};
+renderExam(examData);
+</script>
+</body>
+</html>
