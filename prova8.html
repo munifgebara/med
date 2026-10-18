@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Prova 8 — Microbiologia: Identificação Bioquímica e Antibiograma</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>PROVA 8</h1>
+    <p>Microbiologia — Identificação Bioquímica (API) e Antibiograma</p>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">&larr; Voltar para a lista de provas</a></div>
+
+<main>
+  <div id="quiz-app"></div>
+</main>
+
+<footer class="site-footer">
+  Material de estudo pessoal — uso educacional não comercial.
+</footer>
+
+<script src="assets/js/engine.js"></script>
+<script>
+const examData = {
+  title: "PROVA 8 — Microbiologia: Identificação Bioquímica e Antibiograma",
+  subject: "Sistemas API (20E, 20 STREP, 20 AUX) · Perfil bioquímico de E. coli, Proteus mirabilis, Enterococcus faecalis e Candida albicans · Antibiograma",
+  questions: [
+    {
+      type: "single",
+      points: 15,
+      prompt: "Sobre o princípio das provas de identificação bioquímica (sistemas API), assinale a alternativa correta:",
+      options: [
+        "As provas bioquímicas avaliam quais substratos são ou não utilizados pelo microrganismo em seu metabolismo, gerando um perfil (padrão de cores/reações) que, comparado a um banco de referência, permite identificar a espécie.",
+        "As provas bioquímicas identificam o microrganismo exclusivamente pela sua forma ao microscópio, sem necessidade de qualquer reação química.",
+        "O sistema API é utilizado exclusivamente para a leitura do antibiograma, não para identificação de espécie.",
+        "Todas as bactérias, independentemente do grupo, são identificadas pelo mesmo sistema API, sem distinção entre Gram-positivas e Gram-negativas.",
+        "As provas bioquímicas substituem completamente a necessidade da coloração de Gram."
+      ],
+      correctIndex: 0,
+      explanation: "As provas de identificação bioquímica avaliam o perfil metabólico do micro-organismo — quais substratos ele consegue ou não utilizar/fermentar, gerando reações de cor características em cada cúpula da fita API. Esse perfil (conjunto de resultados positivos/negativos) é comparado a um banco de dados de referência para identificar a espécie com precisão, complementando (não substituindo) a informação morfológica obtida na bacterioscopia/Gram."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem mostra a fita API 20E do Grupo 1 (G1), comparada a um gráfico de referência com o perfil de diferentes enterobactérias, confirmando a espécie pela cor das reações. Assinale a alternativa correta:",
+      image: "assets/img/prova8/api20e-g1-strip.jpg",
+      imageAlt: "Fita API 20E do Grupo 1 com perfil bioquímico",
+      options: [
+        "O sistema API 20E é utilizado para identificar bactérias Gram-negativas (como as da família Enterobacteriaceae); no caso do G1, o perfil bioquímico, lido após 18 a 24h de incubação, confirmou tratar-se de Escherichia coli.",
+        "O sistema API 20E é utilizado exclusivamente para identificar fungos leveduriformes.",
+        "A leitura da fita API 20E deve ser feita imediatamente após a inoculação, sem necessidade de incubação.",
+        "O sistema API 20E é específico para bactérias Gram-positivas, como estreptococos e estafilococos.",
+        "A cor das cúpulas na fita API não tem relação com reações bioquímicas, apenas decorativa."
+      ],
+      correctIndex: 0,
+      explanation: "O sistema API 20E é usado para identificar bactérias Gram-negativas, principalmente da família Enterobacteriaceae. A leitura é feita após um período de incubação (18 a 24h), observando a cor de cada cúpula (que reflete se o substrato correspondente foi ou não metabolizado). No caso do G1, o perfil de reações obtido correspondeu ao padrão de referência de Escherichia coli."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "A imagem compara o perfil bioquímico do Grupo 2 (G2) com um gráfico de referência mostrando diferentes enterobactérias (Klebsiella pneumoniae, Enterobacter cloacae, Proteus mirabilis, Stenotrophomonas maltophilia, Escherichia coli). Assinale a alternativa correta:",
+      image: "assets/img/prova8/api20e-g2-chart.jpg",
+      imageAlt: "Comparação do perfil bioquímico do Grupo 2 com gráfico de referência de enterobactérias",
+      options: [
+        "O perfil de reações do G2 correspondeu ao padrão de referência de Proteus mirabilis, coerente com a motilidade (swarming) e demais características observadas nas etapas anteriores da prática.",
+        "O perfil de reações do G2 correspondeu ao padrão de Stenotrophomonas maltophilia.",
+        "O perfil de reações do G2 correspondeu ao padrão de Klebsiella pneumoniae.",
+        "É impossível diferenciar espécies de enterobactérias apenas por perfil bioquímico, sendo necessário sequenciamento genético.",
+        "O G2 não pôde ser identificado, pois não fermentou nenhum substrato testado."
+      ],
+      correctIndex: 0,
+      explanation: "Comparando o perfil de reações bioquímicas do G2 com o gráfico de referência (que traz os padrões de Klebsiella pneumoniae, Enterobacter cloacae, Proteus mirabilis, Stenotrophomonas maltophilia e Escherichia coli), a correspondência foi com Proteus mirabilis — coerente com a motilidade por swarming e demais características observadas nas etapas de bacterioscopia e urocultura da prática."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "A imagem mostra a comparação do perfil bioquímico do Grupo 3 (G3) com os padrões de referência de Enterococcus faecium e Enterococcus faecalis, usando o sistema API 20 STREP. Assinale a alternativa correta:",
+      image: "assets/img/prova8/api20strep-g3-chart.jpg",
+      imageAlt: "Comparação do perfil bioquímico do Grupo 3 com padrões de Enterococcus",
+      options: [
+        "O sistema API 20 STREP é utilizado para identificar bactérias Gram-positivas (como estreptococos e enterococos); o perfil do G3 correspondeu ao padrão de referência de Enterococcus faecalis.",
+        "O sistema API 20 STREP é utilizado para identificar fungos, não bactérias.",
+        "O perfil do G3 correspondeu ao padrão de Enterococcus faecium, e não de Enterococcus faecalis.",
+        "O sistema API 20 STREP não permite diferenciar espécies dentro do gênero Enterococcus.",
+        "A leitura do API 20 STREP é feita após 7 dias de incubação, mais lenta que o API 20E."
+      ],
+      correctIndex: 0,
+      explanation: "O sistema API 20 STREP é usado para identificar bactérias Gram-positivas, como cocos do gênero Streptococcus e Enterococcus. O perfil de reações do G3 (lido após 4 a 24h de incubação — mais rápido que o API 20E) correspondeu especificamente ao padrão de referência de Enterococcus faecalis, diferenciando-o do perfil de Enterococcus faecium, também disponível para comparação."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "A imagem mostra a comparação do perfil bioquímico do Grupo 4 (G4) com os padrões de referência de Candida albicans e Candida glabrata, usando o sistema API 20 AUX. Assinale a alternativa correta:",
+      image: "assets/img/prova8/api20aux-g4-chart.jpg",
+      imageAlt: "Comparação do perfil bioquímico do Grupo 4 com padrões de Candida",
+      options: [
+        "O sistema API 20 AUX é utilizado para identificar leveduras, com leitura mais demorada (48 a 72h de incubação); o perfil do G4 correspondeu ao padrão de referência de Candida albicans.",
+        "O sistema API 20 AUX é utilizado para identificar bactérias Gram-negativas, com leitura em 18-24h.",
+        "O perfil do G4 correspondeu ao padrão de Candida glabrata, e não de Candida albicans.",
+        "O sistema API 20 AUX dispensa qualquer período de incubação, com leitura imediata.",
+        "Candida albicans e Candida glabrata têm perfis bioquímicos idênticos, não sendo possível diferenciá-las pelo API 20 AUX."
+      ],
+      correctIndex: 0,
+      explanation: "O sistema API 20 AUX é específico para identificação de leveduras, com tempo de incubação mais longo (48 a 72h) do que os sistemas bacterianos (API 20E: 18-24h; API 20 STREP: 4-24h) — reflexo do crescimento mais lento dos fungos. O perfil de reações do G4 correspondeu ao padrão de referência de Candida albicans, diferenciando-se do perfil de Candida glabrata."
+    },
+    {
+      type: "single",
+      points: 15,
+      prompt: "Observe a placa de antibiograma (método de disco-difusão), com múltiplos discos de antimicrobianos formando halos de inibição de tamanhos variados. Assinale a alternativa correta sobre a interpretação desse exame:",
+      image: "assets/img/prova8/antibiograma-placa.jpg",
+      imageAlt: "Placa de antibiograma com halos de inibição de diferentes tamanhos",
+      options: [
+        "O diâmetro do halo de inibição de cada disco é comparado a uma tabela-padrão para classificar o microrganismo como sensível, moderadamente resistente ou resistente àquele antimicrobiano específico — mas o tamanho do halo NÃO indica que um antibiótico seja mais eficaz que outro.",
+        "Quanto maior o halo de qualquer antibiótico, mais eficaz ele é clinicamente em comparação a outro antibiótico com halo menor.",
+        "A ausência completa de halo ao redor de um disco sempre indica contaminação da placa, nunca resistência bacteriana.",
+        "O antibiograma deve ser lido imediatamente após a aplicação dos discos, sem necessidade de incubação.",
+        "Todos os discos de antimicrobianos devem apresentar o mesmo diâmetro de halo, caso contrário o teste é considerado inválido."
+      ],
+      correctIndex: 0,
+      explanation: "No antibiograma por disco-difusão, mede-se o diâmetro do halo de inibição ao redor de cada disco e compara-se com uma tabela-padrão específica para aquele antimicrobiano, classificando o isolado como sensível, moderadamente resistente ou resistente. É importante destacar que o tamanho do halo NÃO permite comparar a eficácia clínica entre antibióticos DIFERENTES entre si — cada antimicrobiano tem sua própria tabela de referência, já que halos de tamanhos naturalmente diferentes podem corresponder à mesma classificação de sensibilidade."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "Por que a ciprofloxacina, embora muito utilizada empiricamente no tratamento de ITU, não seria eficaz caso o agente causador fosse o microrganismo identificado no Grupo 4 (Candida albicans)?",
+      options: [
+        "Porque antibióticos como a ciprofloxacina atuam sobre estruturas/vias bacterianas (ex.: DNA-girase); fungos como Candida albicans não possuem esses alvos bacterianos, exigindo tratamento com antifúngicos específicos.",
+        "Porque a ciprofloxacina só é eficaz contra vírus, nunca contra bactérias ou fungos.",
+        "Porque Candida albicans é naturalmente resistente a todos os fármacos conhecidos, bacterianos ou antifúngicos.",
+        "Porque a ciprofloxacina é tóxica apenas para o rim, nunca tendo ação antimicrobiana.",
+        "Porque não há diferença relevante entre o tratamento de infecções bacterianas e fúngicas."
+      ],
+      correctIndex: 0,
+      explanation: "Antibióticos como a ciprofloxacina (fluoroquinolona) agem sobre alvos bacterianos específicos, como a enzima DNA-girase bacteriana. Fungos como Candida albicans têm estrutura celular eucariótica, sem esses alvos bacterianos específicos — por isso não respondem a antibióticos convencionais, exigindo o uso de antifúngicos (ex.: fluconazol, anfotericina B), que atuam sobre alvos próprios de fungos (como a membrana celular rica em ergosterol)."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "Reunindo todas as etapas da prática (bacterioscopia, urocultura em MacConkey/CLED, identificação bioquímica e antibiograma), assinale a alternativa que resume corretamente o fluxo diagnóstico laboratorial de uma ITU:",
+      options: [
+        "Bacterioscopia (Gram) → urocultura em meios seletivos/diferenciais (MacConkey e CLED) → identificação bioquímica (API, de acordo com o grupo: 20E para Gram-negativos, 20 STREP para Gram-positivos, 20 AUX para leveduras) → antibiograma (disco-difusão) para orientar o tratamento.",
+        "O diagnóstico de ITU dispensa qualquer exame laboratorial, sendo sempre clínico.",
+        "O antibiograma deve sempre ser feito antes da urocultura, invertendo a ordem lógica do processo.",
+        "A identificação bioquímica substitui integralmente a necessidade de urocultura.",
+        "A bacterioscopia é suficiente, isoladamente, para definir o antimicrobiano a ser prescrito."
+      ],
+      correctIndex: 0,
+      explanation: "O fluxo laboratorial completo para diagnóstico microbiológico de ITU segue a sequência: (1) bacterioscopia (coloração de Gram, define forma/arranjo/Gram do microrganismo); (2) urocultura em meios seletivos e diferenciais, como MacConkey (Gram-negativos/leveduras) e CLED (todos os grupos, sem favorecer swarming); (3) identificação bioquímica por sistema API apropriado ao grupo observado na bacterioscopia; e (4) antibiograma, que orienta a escolha terapêutica com base na sensibilidade real do isolado."
+    }
+  ]
+};
+renderExam(examData);
+</script>
+</body>
+</html>

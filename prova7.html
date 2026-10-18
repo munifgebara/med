@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Prova 7 — Microbiologia: Diagnóstico de ITU</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>PROVA 7</h1>
+    <p>Microbiologia — Diagnóstico de Infecção do Trato Urinário</p>
+  </div>
+</header>
+
+<div class="breadcrumb"><a href="index.html">&larr; Voltar para a lista de provas</a></div>
+
+<main>
+  <div id="quiz-app"></div>
+</main>
+
+<footer class="site-footer">
+  Material de estudo pessoal — uso educacional não comercial.
+</footer>
+
+<script src="assets/js/engine.js"></script>
+<script>
+const examData = {
+  title: "PROVA 7 — Microbiologia: Diagnóstico de ITU",
+  subject: "Caso clínico (cistite) · Bacterioscopia (Gram) · Urocultura (ágar MacConkey e CLED)",
+  questions: [
+    {
+      type: "single",
+      points: 10,
+      prompt: "Analice, 25 anos, procura a unidade básica de saúde com dor e ardência miccional há dois dias, polaciúria e urgência urinária nas últimas 12 horas, urina mais escura, sem alteração no cheiro. Nega dor lombar ou febre. Sem comorbidades. Com base nesses dados, a hipótese diagnóstica inicial foi cistite, e não pielonefrite. Assinale a alternativa que melhor justifica essa diferenciação clínica:",
+      image: "assets/img/prova7/caso-clinico-fluxo.jpg",
+      imageAlt: "Fluxograma do raciocínio clínico do caso de Analice",
+      options: [
+        "A ausência de dor lombar e febre afasta, a princípio, o comprometimento do trato urinário superior (rim/pelve renal), favorecendo o diagnóstico de infecção do trato urinário baixo (cistite) em vez de pielonefrite.",
+        "A presença de urina escura é, isoladamente, sinal patognomônico de pielonefrite.",
+        "A ausência de história prévia de ITU torna impossível o diagnóstico de cistite.",
+        "A idade da paciente (25 anos) exclui, por si só, qualquer infecção urinária baixa.",
+        "O uso de anticoncepcional oral é, isoladamente, suficiente para diagnosticar pielonefrite."
+      ],
+      correctIndex: 0,
+      explanation: "Febre e dor lombar (sinal de Giordano positivo) são classicamente associadas ao comprometimento do trato urinário superior — pielonefrite (infecção que acomete o parênquima renal e a pelve). Como a paciente tinha apenas sintomas de trato urinário baixo (disúria, polaciúria, urgência), sem febre ou dor lombar, a hipótese inicial foi cistite (infecção restrita à bexiga). O histórico familiar de ITU e o uso de anticoncepcional oral são fatores que aumentam a suscetibilidade a ITU, mas não definem, isoladamente, o diagnóstico."
+      },
+    {
+      type: "single",
+      points: 10,
+      prompt: "A imagem mostra um esquema sobre os fatores de virulência de Proteus mirabilis associados à infecção ascendente do trato urinário (cistite e pielonefrite) e à formação de cálculos urinários. Assinale a alternativa correta sobre esse microrganismo:",
+      image: "assets/img/prova7/proteus-pielonefrite-diagrama.jpg",
+      imageAlt: "Diagrama dos fatores de virulência de Proteus mirabilis na infecção urinária ascendente",
+      options: [
+        "Proteus mirabilis produz urease, uma enzima que hidrolisa a ureia urinária e alcaliniza a urina, favorecendo a formação de cálculos de estruvita e facilitando a colonização ascendente do trato urinário.",
+        "Proteus mirabilis é um coco Gram-positivo, sem relação com infecções urinárias.",
+        "A urease produzida por Proteus mirabilis acidifica a urina, dificultando sua sobrevivência no trato urinário.",
+        "Proteus mirabilis não possui flagelos nem motilidade, sendo incapaz de ascender pelo trato urinário.",
+        "A formação de cálculos urinários por Proteus mirabilis não tem relação com nenhuma atividade enzimática bacteriana."
+      ],
+      correctIndex: 0,
+      explanation: "Proteus mirabilis é um bacilo Gram-negativo com importantes fatores de virulência: fímbrias (adesão), flagelos (motilidade/swarming, que favorece a ascensão pelo trato urinário) e, principalmente, a enzima UREASE, que hidrolisa a ureia urinária em amônia, alcalinizando a urina — ambiente que favorece a precipitação de cristais de estruvita (fosfato de amônio e magnésio) e a formação de cálculos urinários, além de facilitar a colonização de cateteres e a progressão para pielonefrite."
+    },
+    {
+      type: "single",
+      points: 8,
+      prompt: "No exame parcial de urina (urocultura/contagem de colônias), qual é o valor de corte geralmente utilizado para caracterizar infecção do trato urinário?",
+      options: [
+        "Mais de 100.000 UFC/mL de urina.",
+        "Mais de 100 UFC/mL de urina.",
+        "Mais de 1.000.000 UFC/mL de urina.",
+        "Qualquer crescimento bacteriano, independentemente da contagem, já confirma infecção.",
+        "A contagem de UFC/mL não tem relevância diagnóstica em ITU."
+      ],
+      correctIndex: 0,
+      explanation: "O valor de corte clássico para caracterizar infecção do trato urinário na urocultura é de mais de 100.000 UFC/mL (unidades formadoras de colônia por mililitro) de urina. Contagens mais baixas podem representar contaminação da coleta, especialmente em amostras colhidas sem técnica asséptica adequada, embora em certos contextos clínicos (paciente sintomático, coleta por cateterismo) limiares menores também possam ser considerados significativos."
+    },
+    {
+      type: "single",
+      points: 8,
+      prompt: "Observe o guia visual de morfologia bacteriana (cocos e bacilos, com seus arranjos: diplococos, estreptococos, estafilococos, diplobacilos, estreptobacilos, paliçada). Assinale a alternativa correta sobre a terminologia usada na bacterioscopia:",
+      image: "assets/img/prova7/morfologia-cocos-bacilos-guia.jpg",
+      imageAlt: "Guia visual de morfologia bacteriana: cocos e bacilos e seus arranjos",
+      options: [
+        "Cocos organizados em cadeias são chamados de estreptococos, enquanto cocos organizados em cachos (agrupamentos irregulares) são chamados de estafilococos.",
+        "Bacilos isolados Gram-negativos e diplococos Gram-negativos são sempre a mesma estrutura morfológica.",
+        "Paliçada é um arranjo exclusivo de cocos, nunca observado em bacilos.",
+        "Diplococos são bacilos organizados aos pares, como a Neisseria meningitidis.",
+        "Estreptobacilos referem-se a cocos organizados em cadeias longas."
+      ],
+      correctIndex: 0,
+      explanation: "Na nomenclatura de arranjos bacterianos: cocos em cadeias = estreptococos; cocos em agrupamentos irregulares ('cachos de uva') = estafilococos; cocos aos pares = diplococos (ex.: Neisseria meningitidis, que são diplococos Gram-NEGATIVOS, não bacilos); bacilos aos pares = diplobacilos; bacilos em cadeias = estreptobacilos; bacilos lado a lado = arranjo em paliçada (ex.: Corynebacterium)."
+    },
+    {
+      type: "single",
+      points: 10,
+      prompt: "A imagem mostra a lâmina do Grupo 1 (G1), com aumento de 1000x: forma de bacilos, arranjo individual, Gram negativos. Posteriormente, a identificação bioquímica confirmou se tratar de Escherichia coli. Assinale a alternativa correta sobre essa bactéria no contexto da ITU:",
+      image: "assets/img/prova7/g1-bacterioscopia.jpg",
+      imageAlt: "Bacterioscopia do Grupo 1: bacilos Gram-negativos individuais",
+      options: [
+        "Escherichia coli é a principal causa de infecção do trato urinário não complicada em mulheres, sendo um bacilo Gram-negativo que tipicamente fermenta lactose (LAC+) em ágar MacConkey.",
+        "Escherichia coli é um coco Gram-positivo, agente raro de infecção urinária.",
+        "Escherichia coli não cresce em ágar MacConkey, pois esse meio seleciona apenas bactérias Gram-positivas.",
+        "Escherichia coli é incapaz de fermentar lactose, sendo sempre classificada como LAC- em ágar MacConkey.",
+        "Escherichia coli é um fungo leveduriforme, identificado por meio do sistema API 20 AUX."
+      ],
+      correctIndex: 0,
+      explanation: "Escherichia coli é a causa mais comum de infecção urinária não complicada (cerca de 80% dos casos), sendo um bacilo Gram-negativo que tipicamente fermenta lactose (LAC+), crescendo como colônias rosa/vermelhas em ágar MacConkey — meio seletivo para Gram-negativos e leveduras, que não favorece o crescimento de Gram-positivos."
+    },
+    {
+      type: "single",
+      points: 8,
+      prompt: "A imagem mostra a lâmina do Grupo 2 (G2): bacilos Gram-negativos individuais, posteriormente identificados por provas bioquímicas (API 20E) como Proteus mirabilis. Assinale a alternativa correta sobre esse microrganismo na urocultura:",
+      image: "assets/img/prova7/g2-bacterioscopia.jpg",
+      imageAlt: "Bacterioscopia do Grupo 2: bacilos Gram-negativos individuais",
+      options: [
+        "Proteus mirabilis é conhecido por seu padrão de 'crescimento em véu' (swarming) em meios não seletivos à motilidade, sendo importante usar ágar CLED (sem inibidores de motilidade adequados) ou MacConkey para conter esse espraiamento na urocultura.",
+        "Proteus mirabilis é incapaz de crescer em qualquer meio de cultura laboratorial padrão.",
+        "Proteus mirabilis é identificado exclusivamente pelo sistema API 20 STREP, usado para Gram-positivos.",
+        "Proteus mirabilis é sempre resistente a todos os antimicrobianos testados em antibiograma.",
+        "Proteus mirabilis não é um bacilo Gram-negativo, mas sim um coco Gram-positivo."
+      ],
+      correctIndex: 0,
+      explanation: "Proteus mirabilis é um bacilo Gram-negativo conhecido pela motilidade por flagelos peritríquios, que causa um fenômeno chamado 'swarming' (crescimento em véu, espraiando-se pela superfície do ágar) em meios não seletivos à motilidade — por isso meios como o CLED (que não contém sais que estimulam esse espraiamento) são úteis na urocultura de rotina. A identificação bioquímica de bacilos Gram-negativos é feita pelo sistema API 20E (não API 20 STREP, usado para Gram-positivos)."
+    },
+    {
+      type: "single",
+      points: 8,
+      prompt: "A imagem mostra a lâmina do Grupo 3 (G3): cocos Gram-positivos em arranjo de estreptococos, posteriormente identificados (API 20 STREP) como Enterococcus faecalis. Assinale a alternativa correta:",
+      image: "assets/img/prova7/g3-bacterioscopia.jpg",
+      imageAlt: "Bacterioscopia do Grupo 3: cocos Gram-positivos em arranjo de estreptococos",
+      options: [
+        "Enterococcus faecalis é um coco Gram-positivo, parte da microbiota intestinal normal, que pode causar ITU — sua identificação bioquímica é feita pelo sistema API 20 STREP, específico para Gram-positivos.",
+        "Enterococcus faecalis é um bacilo Gram-negativo, identificado pelo sistema API 20E.",
+        "Enterococcus faecalis não cresce em ágar CLED, apenas em ágar MacConkey.",
+        "Enterococcus faecalis é uma levedura, identificada pelo sistema API 20 AUX.",
+        "Enterococcus faecalis é incapaz de causar infecções do trato urinário."
+      ],
+      correctIndex: 0,
+      explanation: "Enterococcus faecalis é um coco Gram-positivo (arranjo em cadeias curtas/estreptococos), membro da microbiota intestinal normal, mas que pode causar ITU, principalmente em pacientes com fatores de risco (uso de cateteres, hospitalização, uso prévio de antibióticos). É identificado bioquimicamente pelo sistema API 20 STREP (para Gram-positivos). Diferente do MacConkey (que não favorece Gram-positivos), o ágar CLED permite o crescimento tanto de Gram-negativos quanto de Gram-positivos e leveduras."
+    },
+    {
+      type: "single",
+      points: 8,
+      prompt: "A imagem mostra a lâmina do Grupo 4 (G4): células ovaladas, maiores que as bactérias dos demais grupos, coradas de roxo pelo Gram, mas não classificadas tradicionalmente como 'Gram-positivas' ou 'Gram-negativas'. A identificação bioquímica (API 20 AUX) confirmou Candida albicans. Assinale a alternativa que explica essa particularidade:",
+      image: "assets/img/prova7/g4-bacterioscopia.jpg",
+      imageAlt: "Bacterioscopia do Grupo 4: células leveduriformes ovaladas coradas pelo Gram",
+      options: [
+        "Candida albicans é uma levedura (fungo), com parede celular de composição distinta (rica em quitina e glucanas, não peptidoglicano) — por isso, embora se core de roxo pelo método de Gram, não é classificada na dicotomia Gram-positivo/Gram-negativo, exclusiva de bactérias.",
+        "Candida albicans é uma bactéria Gram-positiva atípica, apenas maior que as demais.",
+        "Candida albicans não pode ser visualizada por coloração de Gram, apenas por coloração especial para fungos.",
+        "Candida albicans tem parede celular idêntica à das bactérias Gram-positivas, composta por peptidoglicano.",
+        "A classificação de Gram não se aplica a nenhum microrganismo visualizado ao microscópio óptico."
+      ],
+      correctIndex: 0,
+      explanation: "A classificação Gram-positivo/Gram-negativo é baseada na composição da parede celular bacteriana (presença e espessura da camada de peptidoglicano). Fungos como Candida albicans têm parede celular de composição diferente (quitina, glucanas, mananas), não peptidoglicano — por isso, apesar de reterem o corante violeta de cristal (corando de roxo) por suas características de permeabilidade, não se aplica a eles a classificação Gram-positivo/Gram-negativo, reservada a bactérias."
+    },
+    {
+      type: "single",
+      points: 8,
+      prompt: "Observe a placa de ágar MacConkey, dividida em dois lados (A e B) com crescimento de colônias de cores diferentes (LAC+ e LAC-). Assinale a alternativa correta sobre as propriedades desse meio de cultura:",
+      image: "assets/img/prova7/macconkey-agar.jpg",
+      imageAlt: "Placa de ágar MacConkey mostrando crescimento LAC+ e LAC-",
+      options: [
+        "O ágar MacConkey é seletivo para bactérias Gram-negativas e leveduras (que crescem discretamente), e diferencial quanto à fermentação de lactose: colônias LAC+ (como E. coli) ficam rosa/vermelhas, enquanto LAC- (como Proteus) permanecem incolores.",
+        "O ágar MacConkey é seletivo exclusivamente para bactérias Gram-positivas.",
+        "Todas as bactérias, Gram-positivas e Gram-negativas, crescem igualmente bem em ágar MacConkey.",
+        "A cor das colônias em ágar MacConkey não tem relação com fermentação de lactose, apenas com a temperatura de incubação.",
+        "O ágar MacConkey é usado exclusivamente para identificação de fungos leveduriformes."
+      ],
+      correctIndex: 0,
+      explanation: "O ágar MacConkey contém sais biliares e cristal violeta, que inibem o crescimento de Gram-positivos (seletivo para Gram-negativos, com leveduras crescendo discretamente). É também diferencial: contém lactose e um indicador de pH — bactérias que fermentam lactose (LAC+, como E. coli) produzem ácido e formam colônias rosa/vermelhas; as que não fermentam (LAC-, como Proteus mirabilis) permanecem incolores/claras."
+    },
+    {
+      type: "single",
+      points: 8,
+      prompt: "Observe a placa de ágar CLED (Cystine Lactose Electrolyte Deficient), também dividida mostrando crescimento LAC+ e LAC-. Assinale a alternativa que diferencia corretamente o ágar CLED do ágar MacConkey:",
+      image: "assets/img/prova7/cled-agar.jpg",
+      imageAlt: "Placa de ágar CLED mostrando crescimento LAC+ e LAC-",
+      options: [
+        "Diferente do MacConkey (seletivo para Gram-negativos), o ágar CLED permite o crescimento de bactérias Gram-negativas, Gram-positivas e leveduras — além disso, por ser deficiente em eletrólitos, inibe o fenômeno de 'swarming' de Proteus spp., facilitando a leitura de colônias isoladas.",
+        "O ágar CLED é seletivo exclusivamente para fungos, não permitindo crescimento bacteriano.",
+        "O ágar CLED e o ágar MacConkey têm exatamente as mesmas indicações e propriedades seletivas.",
+        "O ágar CLED não permite avaliar fermentação de lactose, apenas presença/ausência de crescimento.",
+        "O ágar CLED favorece o espraiamento (swarming) de Proteus mirabilis, dificultando a leitura da placa."
+      ],
+      correctIndex: 0,
+      explanation: "O ágar CLED é deficiente em eletrólitos — justamente essa deficiência de eletrólitos impede o fenômeno de 'swarming' (espraiamento) de bactérias móveis como Proteus mirabilis, permitindo a visualização de colônias isoladas, o que facilita a contagem de UFC/mL na urocultura de rotina. Diferente do MacConkey (seletivo, só Gram-negativos e leveduras discretamente), o CLED permite o crescimento de Gram-negativos, Gram-positivos E leveduras, sendo por isso o meio preferido para urocultura de rotina. Também é diferencial para fermentação de lactose (LAC+/LAC-), assim como o MacConkey."
+    },
+    {
+      type: "single",
+      points: 14,
+      prompt: "Considerando o conjunto do caso (E. coli, Proteus mirabilis, Enterococcus faecalis e Candida albicans como possíveis isolados em uroculturas), assinale a alternativa correta sobre a escolha do antimicrobiano:",
+      options: [
+        "A escolha do antimicrobiano deve ser guiada pelo antibiograma do agente isolado — por exemplo, a ciprofloxacina, embora muito utilizada empiricamente em ITU, não seria eficaz caso o agente isolado fosse uma levedura, como Candida albicans.",
+        "Qualquer antibiótico é igualmente eficaz contra bactérias e leveduras, dispensando antibiograma.",
+        "O antibiograma é dispensável sempre que o paciente apresenta melhora espontânea dos sintomas.",
+        "A ciprofloxacina é eficaz contra todos os microrganismos citados, incluindo fungos.",
+        "O tamanho do halo de inibição no antibiograma é diretamente proporcional à eficácia clínica comparada entre diferentes antibióticos."
+      ],
+      correctIndex: 0,
+      explanation: "A urocultura com antibiograma orienta a escolha terapêutica correta. Antibióticos (como a ciprofloxacina, muito usada empiricamente) atuam sobre bactérias, não sobre fungos — por isso seriam ineficazes caso o agente fosse Candida albicans (que exige tratamento antifúngico). Além disso, o tamanho do halo de inibição no antibiograma indica sensibilidade/resistência daquele isolado a cada antibiótico testado, mas NÃO permite comparar diretamente a eficácia entre antibióticos diferentes entre si."
+    }
+  ]
+};
+renderExam(examData);
+</script>
+</body>
+</html>
